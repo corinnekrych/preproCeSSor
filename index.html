@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>preproCeSSor</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/beige.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+        document.write('<link rel="stylesheet" href="css/print/' + ( window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">');
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides" data-background-transition="slide">
+        <section data-transition="linear" data-background-transition="slide">
+            <p style="font-size: 205%">preproCeSSor</p>
+
+            <p>
+                <small> by <a href="http://corinnekrych.org">Corinne Krych</a> / <a
+                        href="http://twitter.com/corinnekrych">@corinnekrych</a></small>
+                <br/>
+                <small> and <a href="http://">Olivier Audard</a> / <a href="http://twitter.com/_dhar">@_dhar </a></small>
+                <br/>
+                <img src="images/jssophia.jpeg" width="25%"/>
+            </p>
+        </section>
+
+        <section data-transition="linear" data-background-transition="slide">
+            <h1>What is it?</h1>
+
+            <p>Brand new CSS language?</p>
+
+            <p>Nope ...</p>
+
+            <p>CSS preprocesors take code written in preprocessed language and then convert that code into the same old
+                CSS we've been writing for years</p>
+        </section>
+
+        <section data-transition="linear" data-background-transition="slide">
+            <section data-transition="linear" data-background-transition="slide">
+                <h1>Which tools?</h1>
+                <h2>Less, SASS &amp; Stylus</h2>
+                <p>There are a variety of CSS preprocessors, the main contenders being Less, SASS and Stylus...</p>
+
+                <p>80% of SASS, LESS and Stylus is the same</p>
+            </section>
+            <section data-transition="linear" data-background="#FFB4EA" data-background-transition="slide">
+                <div class="column">
+                    <img width="75%" src="images/sass.png" alt="Less" class="less-logo"><br/>
+                    <a href="http://sass-lang.com/">http://sass-lang.com/</a>
+                </div>
+            </section>
+            <section data-transition="linear" data-background="#5249FF" data-background-transition="slide">
+                <div class="column">
+                    <img width="75%" src="images/less.jpg" alt="Less" class="less-logo"> <br/>
+                    <a href="http://lesscss.org/">http://lesscss.org/</a>
+                </div>
+            </section>
+            <section data-transition="linear" data-background="#D4FF91" data-background-transition="slide">
+                <div class="column">
+                    <img width="75%" src="images/stylus.png" alt="Less" class="less-logo"><br/>
+                    <a href="http://learnboost.github.com/stylus/">http://learnboost.github.com/stylus/</a>
+                </div>
+            </section>
+        </section>
+
+        <section data-transition="linear" data-background-transition="slide">
+            <h1>Problem to Solve</h1>
+            <img src="images/bay_worried.jpg" width="50%"><br/>
+            <i>How to stay DRY using CSS</i>
+        </section>
+
+        <section data-transition="linear" data-background-transition="slide">
+        <section data-transition="linear" data-background-transition="slide">
+            <h2>Problem 1. Repetition...</h2>
+
+            <p>Take the following snippet of CSS:</p>
+        <pre><code data-trim contenteditable>article {
+    margin-bottom: 20px;
+}
+article h2 {
+    color: #424242;
+}
+article p {
+    margin-bottom: 10px;
+}
+article p:last-child {
+    margin-bottom: 0;
+}
+        </pre>
+            </code>
+
+            <p>Nothing too strenuous, but I don't want to keep writing <em>article</em> again and again. It's tedious!
+            </p>
+        </section>
+
+        <section data-transition="linear" data-background="#FFB4EA" data-background-transition="slide">
+            <h2>Solution 1: Nesting</h2>
+
+            <p>What if, instead of repeating ourselves, we could do this:</p>
+        <pre><code data-trim contenteditable>article {
+ margin-bottom: 20px;
+   h2 {
+     color: #424242;
+   }
+   p {
+     margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+        </pre>
+            </code>
+
+            <p>Nesting is a common pattern within CSS preprocessors and is often the first feature that people use.</p>
+
+            <p>Your preprocessor of choice (more on this later), will take this and compile it down to CSS for you.</p>
+        </section>
+
+        <section data-transition="linear" data-background="#5249FF" data-background-transition="slide">
+                <h2>Solution 1: revisited with LESS</h2>
+
+        <pre><code data-trim contenteditable>
+            TODO LESS
+        </pre>
+                </code>
+        </section>
+        <section data-transition="linear" data-background="#D4FF91" data-background-transition="slide">
+        <h2>Solution 1: revisited with Stylus</h2>
+
+        <pre><code data-trim contenteditable>
+            TODO STYLUS
+
+        </pre>
+        </code>
+        </section>
+        </section>
+
+
+        <section data-transition="linear" data-background-transition="slide">
+        <section data-transition="linear" data-background-transition="slide">
+            <h2>Problem 2. Repeating values</h2>
+
+            <p>Quite often in CSS we may want to use the same value again and again for something. E.g. colours,
+                widths:</p>
+        <pre><code data-trim contenteditable>
+body {
+  color: #424242; /* Set the base text colour */
+}
+a {
+  color: blue; /* Highlight links in blue */
+  text-decoration: none; /* Without an underline */
+}
+a:hover {
+  color: #424242; /* Restore the base colour on hover */
+  text-decoration: underline;
+}
+        </pre>
+            </code>
+
+            <p>In this trivial example, we've repeated that <em>#424242</em> colour value twice but it doesn't have to
+                be this way.</p>
+        </section>
+
+         <section data-transition="linear" data-background="#FFB4EA" data-background-transition="slide">
+            <h2>Solution 2. Variables</h2>
+
+            <p>CSS Preprocessors let you define variables for subsequent use in your stylesheet:</p>
+        <pre><code data-trim contenteditable>
+$base-colour: #424242; /* Variable to hold our base colour*/
+body {
+    color: $base-colour; /* Set the base text colour */
+}
+
+a {
+   color: blue; /* Highlight links in blue */
+   text-decoration: none; /* Without an underline */
+}
+a:hover {
+    color: $base-colour; /* Restore the base colour on hover */
+    text-decoration: underline;
+}
+        </pre>
+            </code>
+        </section>
+
+        <section data-transition="linear" data-background="#5249FF" data-background-transition="slide">
+            <h2>Solution 2: revisited with LESS</h2>
+
+        <pre><code data-trim contenteditable>
+            TODO LESS
+        </pre>
+            </code>
+        </section>
+        <section data-transition="linear" data-background="#D4FF91" data-background-transition="slide">
+            <h2>Solution 2: revisited with Stylus</h2>
+
+        <pre><code data-trim contenteditable>
+            TODO STYLUS
+
+        </pre>
+            </code>
+        </section>
+        </section>
+
+        <section data-transition="linear" data-background-transition="slide">
+        <section data-transition="linear" data-background-transition="slide">
+            <h2>Problem 3. Vendor prefixes</h2>
+            <p>Anyone who writes CSS for a living will be familiar with CSS full of vendor prefixes like the following:</p>
+            <pre><code data-trim contenteditable>
+                .foo {
+                background: #87e0fd;
+                background: -moz-linear-gradient(top,  #87e0fd 0%, #05abe0 100%);
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#87e0fd), color-stop(100%,#05abe0));
+                background: -webkit-linear-gradient(top,  #87e0fd 0%,#05abe0 100%);
+                background: -o-linear-gradient(top,  #87e0fd 0%,#05abe0 100%);
+                background: -ms-linear-gradient(top,  #87e0fd 0%,#05abe0 100%);
+                background: linear-gradient(to bottom,  #87e0fd 0%,#05abe0 100%);
+                }
+        </pre>
+            </code>
+            <p>The internet is full of handy tools to generate this code <em>(E.g. http://www.colorzilla.com/gradient-editor)</em>. They're pretty useful...</p>
+            <p>The code that comes out is properly ugly however. I don't want to read that gibberish!</p>
+        </section>
+
+        <section data-transition="linear" data-background="#FFB4EA" data-background-transition="slide">
+            <h2>Solution 3. "Mixins" to the rescue</h2>
+            <p>CSS Preprocessors can help us out here too, with a construct known as a "Mixin":</p>
+            <pre><code data-trim contenteditable>
+                .foo {
+                background-color: #87e0fd;
+                @include background-image(
+                linear-gradient(
+                top,
+                #87e0fd 0%,
+                #05abe0 100%
+                )
+                );
+                }
+                </pre>
+                </code>
+            <p class="note">N.B: The above example is SASS and uses a mixin built into the Compass framework.</p>
+            <p>In this example the CSS preprocessor has let us write a nice clear statement instead of 7 lines of repetitive nonsense.</p>
+            <p>I for one would much rather maintain this second example! Need to update a colour? Do it once, not 7 times!</p>
+        </section>
+
+         <section data-transition="linear" data-background="#5249FF" data-background-transition="slide">
+                <h2>Solution 3: revisited with LESS</h2>
+
+        <pre><code data-trim contenteditable>
+            TODO LESS
+        </pre>
+                </code>
+        </section>
+        <section data-transition="linear" data-background="#D4FF91" data-background-transition="slide">
+                <h2>Solution 3: revisited with Stylus</h2>
+
+        <pre><code data-trim contenteditable>
+            TODO STYLUS
+
+        </pre>
+        </code>
+        </section>
+
+        <section data-transition="linear"  data-background-transition="slide">
+            <h2>Declaring your own mixins</h2>
+            <p>Mixins can either be defined yourself or there are a variety of libraries on the internet with common ones predefined (E.g. Mixins for all CSS3 properties).</p>
+            <pre><code data-trim contenteditable>
+                @mixin button {
+                @include inline-block;
+                @include box-shadow(0 0 3px rgba(0,0,0,0.25));
+                @include background(#424242 linear-gradient(top, #424242, #000));
+                @include border-radius(5px);
+                color: #fff;
+                padding: 10px;
+                font-size: 15px;
+                line-height: normal;
+                }
+
+                #defining-mixins {
+                a {
+                @include button;
+                }
+                }
+                </pre>
+                </code>
+            <p class="note">N.B. Example is SASS. Syntax varies between languages, but the core concept remains the same.</p>
+            <p><a href="#">I'm a button!</a></p>
+        </section>
+
+        <section data-transition="linear"  data-background-transition="slide">
+            <h2>Getting a bit more fancy!</h2>
+            <pre><code data-trim contenteditable>
+                @mixin button2($color: #424242) {
+                @include inline-block;
+                @include box-shadow(0 0 3px transparentize($color, 0.5));
+                @include background(linear-gradient(top, $color, darken($color, 30%)));
+                @include border-radius(5px);
+                text-shadow: 0 1px 3px contrast-color($color, #fff, #000);
+                color: contrast-color($color, #000, #fff);
+                padding: 10px;
+                font-size: 15px;
+                line-height: normal;
+                margin-right: 10px;
+                }
+
+                #fancy-mixins {
+                a {
+                @include button2(#cdcdcd);
+
+                &.warning {
+                @include button2(#7a0000);
+                }
+                }
+                }
+                </pre>
+                </code>
+            <p><a class="warning" href="#">Cancel</a><a href="#">I'm a button!</a></p>
+        </section>
+        </section>
+
+        <section data-transition="linear" data-background-transition="slide">
+            <section data-transition="linear" data-background-transition="slide">
+                <h2>Problem 4. Mobile/Desktop</h2>
+
+                <p>media queries, multiple files</p>
+        <pre><code data-trim contenteditable>article {
+TODO
+        </pre>
+                </code>
+            </section>
+
+            <section data-transition="linear" data-background="#FFB4EA" data-background-transition="slide">
+                <h2>Solution 4: conditional, import</h2>
+
+                <p>What if, instead of repeating ourselves, we could do this:</p>
+        <pre><code data-trim contenteditable>article {
+TODO
+        </pre>
+                </code>
+             </section>
+            <section data-transition="linear" data-background="#5249FF" data-background-transition="slide">
+                <h2>Solution 4: revisited with LESS</h2>
+
+        <pre><code data-trim contenteditable>
+            TODO LESS
+        </pre>
+                </code>
+            </section>
+            <section data-transition="linear" data-background="#D4FF91" data-background-transition="slide">
+                <h2>Solution 4: revisited with Stylus</h2>
+
+        <pre><code data-trim contenteditable>
+            TODO STYLUS
+
+        </pre>
+                </code>
+            </section>
+        </section>
+
+        <section data-transition="linear" data-background-transition="slide">
+            <section data-transition="linear" data-background-transition="slide">
+                <h2>Problem 5. Color gradient</h2>
+
+                <p>Cherry on the cake</p>
+        <pre><code data-trim contenteditable>
+            TODO
+        </pre>
+                </code>
+            </section>
+
+            <section data-transition="linear" data-background="#FFB4EA" data-background-transition="slide">
+                <h2>Solution 5: color transformation</h2>
+
+        <pre><code data-trim contenteditable>
+            TODO
+        </pre>
+                </code>
+            </section>
+            <section data-transition="linear" data-background="#5249FF" data-background-transition="slide">
+                <h2>Solution 4: revisited with LESS</h2>
+        <pre><code data-trim contenteditable>
+            TODO LESS
+        </pre>
+                </code>
+            </section>
+            <section data-transition="linear" data-background="#D4FF91" data-background-transition="slide">
+                <h2>Solution 4: revisited with Stylus</h2>
+
+        <pre><code data-trim contenteditable>
+            TODO STYLUS
+       </pre>
+                </code>
+            </section>
+        </section>
+
+        <section data-transition="linear" data-background-transition="slide">
+            <img src="images/baby.jpg" width="50%"><br/>
+            <h1>I can stay DRY!</h1>
+        </section>
+
+        <section data-transition="linear" data-background-transition="slide">
+        <section data-transition="linear" data-background-transition="slide">
+            <h1>How?</h1>
+            <h3 class="sub">Ok great, but how do I use one of these preprocessors?</h3>
+        </section>
+
+        <section data-transition="linear" data-background-transition="slide">
+            <h2>Installing</h2>
+            <p>TODO</p>
+        </section>
+
+        <section data-transition="linear" data-background-transition="slide">
+            <h2>Compiling Less / SASS / Stylus</h2>
+        </section>
+        </section>
+
+        <section data-transition="linear" data-background-transition="slide">
+            <section data-transition="linear" data-background-transition="slide">
+                <h1>Examples</h1>
+                <h3 class="sub">Who uses it?</h3>
+                <p class="fragment grow">Reveal theme with Sass</p>
+                <p class="fragment grow">Bootstrap theme with Less</p>
+                <p class="fragment grow">Topcoat with Stylus</p>
+
+            </section>
+
+            <section data-transition="linear" data-background-transition="slide">
+                <h2>Reveal theme<??/h2>
+                <p>TODO </p>
+            </section>
+
+            <section data-transition="linear" data-background-transition="slide">
+                <h2>Bootstrap</h2>
+                <p>TODO </p>
+            </section>
+
+            <section data-transition="linear" data-background-transition="slide">
+                <h2>Topcoat</h2>
+                <p>TODO I want to show fabrice's component: https://github.com/topcoat/button-list </p>
+            </section>
+
+
+        </section>
+
+        <section data-transition="linear" data-background-transition="slide">
+            <section data-transition="linear" data-background-transition="slide">
+                <h1>Delving further</h1>
+                <img src="images/gateau.jpg" width="50%"><br/>
+            </section>
+            <section data-transition="linear" data-background-transition="slide">
+                <h2>SASS + Compass</h2>
+                <p>When talking about SASS, Compass will often be mentioned in tandem. But what is it?</p>
+                <p>SASS is the actual preprocessor, defining the underlying language.</p>
+                <p>Compass is a (optional) framework built on top of SASS.</p>
+            </section>
+            <section data-transition="linear" data-background-transition="slide">
+                <h2>What can Compass do?</h2>
+                <p>It provides common mixins for all CSS3 properties. People have written similar mixin libraries for Less etc.</p>
+                <p>The extra bit that Compass affords you however, are the additional utilities to help you with common layout tasks and more complex things like spriting.</p>
+            </section>
+        </section>
+
+        <section data-transition="linear" data-background-transition="slide">
+            <img src="images/thats-all-folks.jpg" width="80%"><br/>
+        </section>
+    </div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls:true,
+        progress:true,
+        history:true,
+        center:true,
+
+        theme:Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition:Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies:[
+            { src:'lib/js/classList.js', condition:function () {
+                return !document.body.classList;
+            } },
+            { src:'plugin/markdown/marked.js', condition:function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src:'plugin/markdown/markdown.js', condition:function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src:'plugin/highlight/highlight.js', async:true, callback:function () {
+                hljs.initHighlightingOnLoad();
+            } },
+            { src:'plugin/zoom-js/zoom.js', async:true, condition:function () {
+                return !!document.body.classList;
+            } },
+            { src:'plugin/notes/notes.js', async:true, condition:function () {
+                return !!document.body.classList;
+            } }
+        ]
+    });
+
+</script>
+
+</body>
+</html>
