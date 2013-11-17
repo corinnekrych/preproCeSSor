@@ -58,10 +58,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="456" column="38" selection-start="17788" selection-end="17788" vertical-scroll-proportion="0.8202039">
+            <state line="49" column="0" selection-start="1502" selection-end="1682" vertical-scroll-proportion="-27.541666">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mixins.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/theme/template/mixins.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="simple.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/theme/source/simple.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -70,16 +88,18 @@
       <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/aerogear/aerogear.org/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="707" column="0" selection-start="18117" selection-end="18117" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="713" column="0" selection-start="18328" selection-end="18328" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1384685574000" expanded="true" signature="18325:18327" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.sass" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.sass" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$USER_HOME$/aerogear/aerogear.org/sass/main.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="468" column="7" selection-start="10172" selection-end="10177" vertical-scroll-proportion="-220.38461">
+            <state line="338" column="23" selection-start="7585" selection-end="7585" vertical-scroll-proportion="-0.8783658">
               <folding />
             </state>
           </provider>
@@ -89,15 +109,6 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
             <state line="13" column="57" selection-start="692" selection-end="692" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="normalize.sass" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/aerogear/aerogear.org/sass/normalize.sass">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -127,16 +138,16 @@
       <list>
         <option value="$PROJECT_DIR$/index_reveal_ex.html" />
         <option value="$USER_HOME$/aerogear/aerogear.org/css/main.css" />
-        <option value="$USER_HOME$/aerogear/aerogear.org/sass/main.sass" />
         <option value="$USER_HOME$/aerogear/aerogear.org/css/normalize.css" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$USER_HOME$/aerogear/aerogear.org/sass/main.sass" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1135" />
-    <option name="y" value="60" />
+    <option name="x" value="1139" />
+    <option name="y" value="28" />
     <option name="width" value="1378" />
     <option name="height" value="1264" />
   </component>
@@ -205,7 +216,69 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="preproCeSSor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="preproCeSSor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="preproCeSSor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="preproCeSSor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="preproCeSSor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="preproCeSSor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="source" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -414,7 +487,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1135" y="60" width="1378" height="1264" extended-state="0" />
+    <frame x="1139" y="28" width="1378" height="1264" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -496,30 +569,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/images/stylus.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/reveal.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="0" selection-start="1917" selection-end="1917" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index_reveal_ex.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="338" column="31" selection-start="10959" selection-end="10963" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/aerogear/aerogear.org/css/font-awesome.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/aerogear/aerogear.org/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -529,8 +578,10 @@
     </entry>
     <entry file="file://$USER_HOME$/aerogear/aerogear.org/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="707" column="0" selection-start="18117" selection-end="18117" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="713" column="0" selection-start="18328" selection-end="18328" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1384685574000" expanded="true" signature="18325:18327" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -551,13 +602,6 @@
     <entry file="file://$USER_HOME$/aerogear/aerogear.org/sass/normalize.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/aerogear/aerogear.org/sass/main.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="468" column="7" selection-start="10172" selection-end="10177" vertical-scroll-proportion="-220.38461">
           <folding />
         </state>
       </provider>
@@ -589,9 +633,44 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/theme/template/mixins.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/theme/source/moon.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/theme/source/simple.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/theme/source/beige.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="131" selection-start="554" selection-end="554" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="456" column="38" selection-start="17788" selection-end="17788" vertical-scroll-proportion="0.8202039">
+        <state line="49" column="0" selection-start="1502" selection-end="1682" vertical-scroll-proportion="-27.541666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/aerogear/aerogear.org/sass/main.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="338" column="23" selection-start="7585" selection-end="7585" vertical-scroll-proportion="-0.8783658">
           <folding />
         </state>
       </provider>
