@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$USER_HOME$/aerogear/aerogear.org/Aerogear.org.iml" filepath="$USER_HOME$/aerogear/aerogear.org/Aerogear.org.iml" />
       <module fileurl="file://$PROJECT_DIR$/preproCeSSor.iml" filepath="$PROJECT_DIR$/preproCeSSor.iml" />
     </modules>
   </component>

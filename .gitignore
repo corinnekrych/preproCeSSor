@@ -4,3 +4,11 @@ log/*.log
 tmp/**
 node_modules/
 .sass-cache
+
+/target/
+.idea/
+*.class
+*.iml
+.classpath
+.project
+.settings/
