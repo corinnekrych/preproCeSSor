@@ -28,6 +28,17 @@
     <!--[if lt IE 9]>
     <script src="lib/js/html5shiv.js"></script>
     <![endif]-->
+    <style>
+        .css {color:#0A70C2;}
+
+        #footer {
+            font-size: 0.6em;
+            position: absolute;
+            bottom: 0;
+            height: 200px;
+            width: 600px;
+        }
+    </style>
 </head>
 
 <body>
@@ -36,8 +47,12 @@
 
     <!-- Any section element inside of this container is displayed as a slide -->
     <div class="slides" data-background-transition="slide">
+        <!--<div id="footer">-->
+            <!--prepro<span class="css">C</span>e<span class="css">SS</span>or<br/>-->
+            <!--@corinnekrych / @_dhar-->
+        <!--</div>-->
         <section data-transition="linear" data-background-transition="slide">
-            <p style="font-size: 205%">preproCeSSor</p>
+            <p style="font-size: 205%">prepro<span class="css">C</span>e<span class="css">SS</span>or</p>
 
             <p>
                 <small> by <a href="http://corinnekrych.org">Corinne Krych</a> / <a
@@ -56,15 +71,14 @@
 
             <p>Nope ...</p>
 
-            <p>CSS preprocesors take code written in preprocessed language and then convert that code into the same old
-                CSS we've been writing for years</p>
+            <p><span class="css">CSS preprocesors</span> take code written in preprocessed language and then convert that code into <span class="css">POCSS</span></p> <p>- Plain Old CSS - in case you're puzzled</p>
         </section>
 
         <section data-transition="linear" data-background-transition="slide">
             <section data-transition="linear" data-background-transition="slide">
                 <h1>Which tools?</h1>
                 <h2>Less, SASS &amp; Stylus</h2>
-                <p>There are a variety of CSS preprocessors, the main contenders being Less, SASS and Stylus...</p>
+                <p>There are a variety of CSS preprocessors, the main contenders being <span class="css">Less</span>, <span class="css">SASS</span> and <span class="css">Stylus...</p>
 
                 <p>80% of SASS, LESS and Stylus is the same</p>
             </section>
@@ -96,69 +110,80 @@
 
         <section data-transition="linear" data-background-transition="slide">
         <section data-transition="linear" data-background-transition="slide">
-            <h2>Problem 1. Repetition...</h2>
+            <h2>Problem 1. Selector Repetition</h2>
 
             <p>Take the following snippet of CSS:</p>
-        <pre><code data-trim contenteditable>article {
-    margin-bottom: 20px;
+        <pre style="width:50%"><code data-trim contenteditable>.module img {
+  width: 6em;
+  padding: 5px;
 }
-article h2 {
-    color: #424242;
+.module p {
+  color: #7514e1;
+  text-align: center;
+  font-size: 0.9em;
 }
-article p {
-    margin-bottom: 10px;
+.module:hover img, .module:active img {
+  border: 5px #f23eea solid;
+  padding: 0;
+  border-radius: 4px;
 }
-article p:last-child {
-    margin-bottom: 0;
+.module.ios h3 {
+  color: #214067;
 }
+.module.android h3 {
+  color: #718927;
+}
+.module.web h3 {
+  color: #be420c;
+}
+.module.hybrid h3 {
+  color: #60625e;
+}
+
         </pre>
             </code>
 
-            <p>Nothing too strenuous, but I don't want to keep writing <em>article</em> again and again. It's tedious!
+            <p>I don't want to keep writing <em>module</em> again and again. It's tedious!
             </p>
         </section>
 
-        <section data-transition="linear" data-background="#FFB4EA" data-background-transition="slide">
+        <section data-transition="linear" data-background-transition="slide">
             <h2>Solution 1: Nesting</h2>
 
-            <p>What if, instead of repeating ourselves, we could do this:</p>
-        <pre><code data-trim contenteditable>article {
- margin-bottom: 20px;
-   h2 {
-     color: #424242;
-   }
-   p {
-     margin-bottom: 10px;
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-  }
+            <p>Much concise:</p>
+
+        <pre style="width:50%"><code data-trim contenteditable>.module
+  img
+    width: 6em
+    padding: 5px
+  p
+    color: #7514e1
+    text-align: center
+    font-size: 0.9em
+  &:hover img, &:active img
+    border: 5px #f23ee solid
+    padding: 0
+    border-radius: 4px
+  &.ios h3
+    color: #214067
+  &.android h3
+    color: #718927
+  &.web h3
+    color: #be420c
+  &.hybrid h3
+    color: #60625e
         </pre>
-            </code>
+                    </code>
 
-            <p>Nesting is a common pattern within CSS preprocessors and is often the first feature that people use.</p>
+            <p class="fragment fade-in"><span class="css">Nesting</span> is a common pattern within CSS preprocessors.</p>
 
-            <p>Your preprocessor of choice (more on this later), will take this and compile it down to CSS for you.</p>
+            <p class="fragment fade-in">Prepocessors take this and <span class="css">compile</span> it down to CSS for you.</p>
+            <p class="fragment fade-in">JUST the same syntax fo <span class="css">Less</span> and <span class="css">Stylus</span></p>
+            <p class="fragment fade-in"><span class="css">2 syntaxes:</span> sassy scss (.scss) or sass syntax (.sass)</p>
+            <p class="fragment fade-in">For stylus too you can opt to keep ; and {} </p>
         </section>
 
-        <section data-transition="linear" data-background="#5249FF" data-background-transition="slide">
-                <h2>Solution 1: revisited with LESS</h2>
 
-        <pre><code data-trim contenteditable>
-            TODO LESS
-        </pre>
-                </code>
-        </section>
-        <section data-transition="linear" data-background="#D4FF91" data-background-transition="slide">
-        <h2>Solution 1: revisited with Stylus</h2>
-
-        <pre><code data-trim contenteditable>
-            TODO STYLUS
-
-        </pre>
-        </code>
-        </section>
         </section>
 
 
@@ -406,8 +431,7 @@ TODO
                 <h2>Solution 4: revisited with LESS</h2>
         <pre><code data-trim contenteditable>
             TODO LESS
-        </pre>
-                </code>
+        </pre></code>
             </section>
             <section data-transition="linear" data-background="#D4FF91" data-background-transition="slide">
                 <h2>Solution 4: revisited with Stylus</h2>
@@ -420,24 +444,59 @@ TODO
         </section>
 
         <section data-transition="linear" data-background-transition="slide">
-            <img src="images/baby.jpg" width="50%"><br/>
             <h1>I can stay DRY!</h1>
+            <img src="images/baby.jpg" width="50%"><br/>
         </section>
 
         <section data-transition="linear" data-background-transition="slide">
-        <section data-transition="linear" data-background-transition="slide">
-            <h1>How?</h1>
-            <h3 class="sub">Ok great, but how do I use one of these preprocessors?</h3>
-        </section>
+            <section data-transition="linear" data-background-transition="slide">
+                <h1>How?</h1>
+                <img src="images/baby_unhappy.jpg" width="50%"><br/>
+                <h3 class="sub">Ok great, but how do I use one of these preprocessors?</h3>
+            </section>
 
-        <section data-transition="linear" data-background-transition="slide">
-            <h2>Installing</h2>
-            <p>TODO</p>
-        </section>
+            <section data-transition="linear"  data-background="#FFB4EA" data-background-transition="slide">
+                <h2>Getting starting with SASS</h2>
+                <p>Install</p>
+                    <pre><code data-trim contenteditable>
+                        >  gem install sass
+                    </pre></code>
+                <p>Convert existing CSS</p>
+                    <pre><code data-trim contenteditable>
+                        >  sass-convert --from css --to sass -R css</pre></code>
+                <p>Compile</p>
+                    <pre><code data-trim contenteditable>
+                        >  sass --watch sass:css</pre></code>
+            </section>
 
-        <section data-transition="linear" data-background-transition="slide">
-            <h2>Compiling Less / SASS / Stylus</h2>
-        </section>
+            <section data-transition="linear"  data-background="#5249FF"data-background-transition="slide">
+                <h2>Getting starting with Less</h2>
+                <h3>Install</h3>
+                <h3>Compile</h3>
+            </section>
+
+            <section data-transition="linear"  data-background="#D4FF91" data-background-transition="slide">
+                <h2>Getting starting with Stylus</h2>
+                <p>Install</p>
+                    <pre><code data-trim contenteditable>
+                        >  npm install stylus
+                    </pre></code>
+                <p>Convert existing CSS</p>
+                    <pre><code data-trim contenteditable>
+                        >  stylus --css css/main.css stylus/main.styl</pre></code>
+                <p><small>lost my comments and my fonts :(</small></p>
+                <p><small>some error when back to CSS :(</small></p>
+                <p>Compile</p>
+                    <pre><code data-trim contenteditable>
+                        >  stylus css</pre></code>
+                <p><small>no watch</small></p>
+            </section>
+            <section data-transition="linear" data-background-transition="slide">
+                <h1>Which one?</h1>
+                <img src="images/baby_puzzled.jpg" width="50%"><br/>
+                <h3 class="sub">Too much choices?</h3>
+                <p>Remember 80% implement the same features</p>
+            </section>
         </section>
 
         <section data-transition="linear" data-background-transition="slide">
@@ -451,7 +510,14 @@ TODO
             </section>
 
             <section data-transition="linear" data-background-transition="slide">
-                <h2>Reveal theme<??/h2>
+                <h2>aerogear.org</h2>
+                <p>Take one web site and decline it in Sass, Less ans Stylus</p>
+                <a href="https://github.com/corinnekrych/aerogear.org/blob/sass/README.md">Sass branch</a> <br/>
+                <a href="https://github.com/corinnekrych/aerogear.org/blob/stylus/README.md">Stylus branch</a>
+            </section>
+
+            <section data-transition="linear" data-background-transition="slide">
+                <h2>Reveal theme</h2>
                 <p>TODO </p>
             </section>
 
@@ -473,16 +539,21 @@ TODO
                 <h1>Delving further</h1>
                 <img src="images/gateau.jpg" width="50%"><br/>
             </section>
-            <section data-transition="linear" data-background-transition="slide">
+            <section data-transition="linear"  data-background="#FFB4EA" data-background-transition="slide">
                 <h2>SASS + Compass</h2>
                 <p>When talking about SASS, Compass will often be mentioned in tandem. But what is it?</p>
                 <p>SASS is the actual preprocessor, defining the underlying language.</p>
                 <p>Compass is a (optional) framework built on top of SASS.</p>
             </section>
-            <section data-transition="linear" data-background-transition="slide">
+            <section data-transition="linear"  data-background="#FFB4EA" data-background-transition="slide">
                 <h2>What can Compass do?</h2>
                 <p>It provides common mixins for all CSS3 properties. People have written similar mixin libraries for Less etc.</p>
                 <p>The extra bit that Compass affords you however, are the additional utilities to help you with common layout tasks and more complex things like spriting.</p>
+            </section>
+            <section data-transition="linear"  data-background="#D4FF91" data-background-transition="slide">
+                <h2>Nib for Stylus</h2>
+                <p>Early stage</p>
+                <p>Vendor Prefixes for gradient</p>
             </section>
         </section>
 
