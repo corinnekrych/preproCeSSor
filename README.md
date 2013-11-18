@@ -8,6 +8,7 @@ You can view the presentation [here thanks to github pages](), it is built upon 
 * On CSS preprocessor
 
 	- [Deep dive into CSS prepocessors](http://verekia.com/slides/css-preprocessors).
+	- [Sass vs Less vs Stylus](http://net.tutsplus.com/tutorials/html-css-techniques/sass-vs-less-vs-stylus-a-preprocessor-shootout/)
 	- [Sass, less and Stylus](http://www.slideshare.net/patricka1/css-preprocessors-sass-less-and-stylus).
 	- [Sass resources](http://mashable.com/2013/06/11/sass-compass-tools/).
 	- [CSS Preprocessors: Why, How, and "Wow!"](http://slides.andymantell.com/digpen-v-css-preprocessors-why-how-and-wow)
