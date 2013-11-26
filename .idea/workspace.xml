@@ -61,7 +61,16 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="351" column="0" selection-start="14594" selection-end="14594" vertical-scroll-proportion="0.78436655">
+            <state line="641" column="58" selection-start="26975" selection-end="26975" vertical-scroll-proportion="0.37286612">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="button-bar.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/button-bar.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="88" selection-start="372" selection-end="407" vertical-scroll-proportion="-5.0">
               <folding />
             </state>
           </provider>
@@ -80,15 +89,6 @@
         <entry file="file://$PROJECT_DIR$/index_reveal_ex.html">
           <provider selected="true" editor-type-id="text-editor">
             <state line="346" column="8" selection-start="11130" selection-end="11181" vertical-scroll-proportion="-8.02">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reveal.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/reveal.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="255" column="27" selection-start="5954" selection-end="5957" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -170,12 +170,13 @@
         <option value="$USER_HOME$/aerogear/aerogear.org/css/main.css" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$USER_HOME$/aerogear/aerogear.org/stylus/main.styl" />
+        <option value="$PROJECT_DIR$/button-bar.html" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1202" />
+    <option name="x" value="757" />
     <option name="y" value="22" />
     <option name="width" value="1341" />
     <option name="height" value="1346" />
@@ -331,6 +332,11 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
@@ -479,7 +485,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1202" y="22" width="1341" height="1346" extended-state="0" />
+    <frame x="757" y="22" width="1341" height="1346" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -561,11 +567,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/images/baby_question.jpeg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/theme/template/mixins.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -652,9 +653,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/button-bar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="88" selection-start="372" selection-end="407" vertical-scroll-proportion="-5.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="351" column="0" selection-start="14594" selection-end="14594" vertical-scroll-proportion="0.78436655">
+        <state line="641" column="58" selection-start="26975" selection-end="26975" vertical-scroll-proportion="0.37286612">
           <folding />
         </state>
       </provider>

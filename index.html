@@ -1,4 +1,72 @@
-<!doctype html>
+<!DOCTYPE html [
+        <!ELEMENT html (head|body)*>
+        <!ATTLIST html
+                lang CDATA #REQUIRED>
+        <!ELEMENT head (meta|title|link|script|style)*>
+        <!ELEMENT meta (#PCDATA)>
+        <!ATTLIST meta
+                charset CDATA #IMPLIED
+                content CDATA #IMPLIED
+                name CDATA #IMPLIED>
+        <!ELEMENT title (#PCDATA)>
+        <!ELEMENT link (#PCDATA)>
+        <!ATTLIST link
+                href CDATA #REQUIRED
+                id CDATA #IMPLIED
+                rel CDATA #REQUIRED>
+        <!ELEMENT script (#PCDATA)>
+        <!ATTLIST script
+                src CDATA #IMPLIED>
+        <!ELEMENT style (#PCDATA)>
+        <!ELEMENT body (div|script)*>
+        <!ELEMENT div (div|section|a|br|p)*>
+        <!ATTLIST div
+                class CDATA #REQUIRED
+                data-background-transition CDATA #IMPLIED>
+        <!ELEMENT section (p|h1|h2|div|img|br|h3|pre|iframe|a)*>
+        <!ATTLIST section
+                data-background CDATA #IMPLIED
+                data-background-transition CDATA #REQUIRED
+                data-transition CDATA #REQUIRED>
+        <!ELEMENT p (span|small|br|img|em)*>
+        <!ATTLIST p
+                class CDATA #IMPLIED
+                style CDATA #IMPLIED>
+        <!ELEMENT span (span)*>
+        <!ATTLIST span
+                class CDATA #IMPLIED>
+        <!ELEMENT small (a|span)*>
+        <!ELEMENT a (img)*>
+        <!ATTLIST a
+                href CDATA #REQUIRED>
+        <!ELEMENT br (#PCDATA)>
+        <!ELEMENT img (#PCDATA)>
+        <!ATTLIST img
+                alt CDATA #IMPLIED
+                class CDATA #IMPLIED
+                src CDATA #REQUIRED
+                width CDATA #REQUIRED>
+        <!ELEMENT h1 (#PCDATA)>
+        <!ELEMENT h2 (span)*>
+        <!ELEMENT h3 (#PCDATA)>
+        <!ATTLIST h3
+                class CDATA #IMPLIED>
+        <!ELEMENT pre (code)*>
+        <!ATTLIST pre
+                style CDATA #IMPLIED>
+        <!ELEMENT code (#PCDATA)>
+        <!ATTLIST code
+                contenteditable CDATA #REQUIRED
+                data-trim CDATA #REQUIRED>
+        <!ELEMENT em (#PCDATA)>
+        <!ELEMENT iframe (#PCDATA)>
+        <!ATTLIST iframe
+                width CDATA #REQUIRED
+                height CDATA #REQUIRED
+                src CDATA #REQUIRED
+                allowfullscreen CDATA #REQUIRED
+                frameborder CDATA #REQUIRED>
+        ]>
 <html lang="en">
 
 <head>
@@ -16,7 +84,8 @@
 
     <link rel="stylesheet" href="css/reveal.min.css">
     <link rel="stylesheet" href="css/theme/beige.css" id="theme">
-
+    <link rel="stylesheet" type="text/css" href="css/topcoat-button-bar-mobile-light.css">
+    <link rel="stylesheet" type="text/css" href="css/topcoat-button-list-mobile-light.css">
     <!-- For syntax highlighting -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
 
@@ -341,39 +410,43 @@ h4
 
         <section data-transition="linear" data-background-transition="slide">
             <h2>Problem 4. CSS pattern</h2>
-            <p>build your <span class="css">toolkit</span></p>
+            <p>For example: <span class="css">vertical align</span> text</p>
+            <p>to be applied several times on different context</p>
+            <p>with different variant</p>
+        </section>
+
+        <section data-transition="linear" data-background-transition="slide">
+            <h2>Solution 4. mixin with parameter</h2>
+            <p>build your own <span class="css">toolkit</span></p>
+            <p>or reuse <span class="css">toolkit</span> like SCUT</p>
             <pre><code data-trim contenteditable>
-@mixin vertically-center ($child: ".vcentered") {
-  display: table;
-  & > #{$child} {
-    display: table-cell;
-    vertical-align: middle;
-  }
-}
+    @mixin vertically-center ($child: ".vcentered") {
+      display: table;
+      & > #{$child} {
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
         </pre>
             </code>
             <p class="fragment fade-in">Avoid <span class="css">repetition</span></p>
+            <p class="fragment fade-in"><small>use parameter, here with default value</small></p>
             <p class="fragment fade-in"><span class="css">Organize</span> code</p>
             <p class="fragment fade-in"><span class="css">Reuse</span> code</p>
 
         </section>
-
         <section data-transition="linear" data-background-transition="slide">
-            <h2>Solution4. Custom mixin</h2>
-            <p><span class="css">Prefixes</span> to add support for new <span class="css">CSS features</span></p>
+            <h2>Solution4. more mixin</h2>
+            <p>Going <span class="css">further</span> with <span class="css">CSS features</span></p>
             <iframe width="100%" height="300" src="http://jsfiddle.net/jitendravyas/cxJtc/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-            <!--<p class="fragment fade-in">By nature, they are <span class="css">temporary</span></p>-->
-            <!--<p class="fragment fade-in">Don't assume properties are named the <span class="css">same</span></p>-->
-            <!--<p class="fragment fade-in"><small>use a generic mixin to generate them, <span class="css">won't</span> work</small></p>-->
-            <!--<p class="fragment fade-in">Use well maintained libraries like  <span class="css">Compass</span> or <span class="css">Bourbon</span></p>-->
-            <!--<p class="fragment fade-in">Even better... Perfect use case for <span class="css">postprocessor</span></p>-->
-            <!--<p class="fragment fade-in"><small>like <span class="css">Autoprefixer</span> is kept up to date with <span class="css">can I use</span> database</small></p>-->
+            <p class="fragment fade-in">Include block with <span class="css">@content</span></p>
+            <p class="fragment fade-in">Loop with <span class="css">@for</span></p>
+            <p class="fragment fade-in">Use mixin with <span class="css">@include</span></p>
         </section>
 
         <section data-transition="linear" data-background-transition="slide">
-                <h2>Problem 4. Mobile/Desktop</h2>
-
+                <h2>Problem 5. Mobile/Desktop</h2>
                 <p><span class="css">@media</span> queries block <span class="css">scatters</span> styles rules</p>
         <pre><code data-trim contenteditable>
 p {
@@ -398,28 +471,35 @@ p {
                 </code>
             </section>
 
-            <section data-transition="linear" data-background="#FFB4EA" data-background-transition="slide">
-                <h2>Solution 4: @media</h2>
+            <section data-transition="linear" data-background-transition="slide">
+                <h2>Solution 5: @media</h2>
 
                 <p>What if, we could keep the logic at <span class="css">one place</span></p>
-        <pre><code data-trim contenteditable>article {
-TODO
-        </pre>
+        <pre><code data-trim contenteditable>
+p
+  max-width: 960px;
+  @media only screen and (max-width: 656px)
+    max-width: 720px;
+.feature
+  max-width: 960px;
+  @media only screen and (max-width: 656px)
+    max-width: 720px;
+} </pre>
                 </code>
-                <p><small>I read <span class="css">p</span> element and I know how it behave in different resolution</small></p>
-                <p><But I <span class="css">WAIT</span>...</small></p>
+                <p>All CSS on HTML element are grouped in a same <span class="css">place</span></p>
+                <p>but I repeat @media <span class="css">WAIT</span>...</small></p>
             </section>
 
-            <section data-transition="linear" data-background="#FFB4EA" data-background-transition="slide">
+            <section data-transition="linear" data-background-transition="slide">
                 <h2>I'm not DRY</h2>
                 <p>anymore</p>
                 <img src="images/cute-baby-girl.jpg" width="50%"><br/>
             </section>
 
-            <section data-transition="linear" data-background="#FFB4EA" data-background-transition="slide">
-                <h2>Solution 4: Going further<span class="css">@mixin @if</span></h2>
+            <section data-transition="linear" data-background-transition="slide">
+                <h2>Solution 5: Going further<span class="css">@mixin @if</span></h2>
 
-                <p>Parametrized break point!</p>
+                <p>Parametrized <span class="css">break point!</span></p>
         <pre><code data-trim contenteditable>
 $break-phone:656px
 $break-tablet:848px
@@ -446,26 +526,6 @@ p
 
 
         <section data-transition="linear" data-background-transition="slide">
-                <h2>Problem 5. Color gradient</h2>
-
-                <p>Cherry on the cake</p>
-        <pre><code data-trim contenteditable>
-            TODO
-        </pre>
-                </code>
-            </section>
-
-            <section data-transition="linear" data-background-transition="slide">
-                <h2>Solution 5: color transformation</h2>
-
-        <pre><code data-trim contenteditable>
-            TODO
-        </pre>
-                </code>
-            </section>
-
-
-        <section data-transition="linear" data-background-transition="slide">
             <h1>I can stay DRY!</h1>
             <img src="images/baby.jpg" width="50%"><br/>
         </section>
@@ -473,7 +533,7 @@ p
             <section data-transition="linear" data-background-transition="slide">
                 <h1>How?</h1>
                 <img src="images/baby_unhappy.jpg" width="50%"><br/>
-                <h3 class="sub">Ok great, but how do I use one of these preprocessors?</h3>
+                <p>Is it <span class="css">difficult</span> to use?</p>
             </section>
 
             <section data-transition="linear"  data-background="#FFB4EA" data-background-transition="slide">
@@ -492,8 +552,21 @@ p
 
             <section data-transition="linear"  data-background="#5249FF"data-background-transition="slide">
                 <h2>Getting starting with Less</h2>
-                <h3>Install</h3>
-                <h3>Compile</h3>
+                <p>Install</p>
+                    <pre><code data-trim contenteditable>
+                        >  npm install -g less</pre></code>
+                     <p>Compile</p>
+                    <pre><code data-trim contenteditable>
+                        >  lessc styles.less</pre></code>
+                <p>Dev mode</p>
+                    <pre><code data-trim contenteditable>// include JS
+<script src="less.js" type="text/javascript"></script>
+// include less file
+<link rel="stylesheet/less" type="text/css" href="styles.less" />
+// To enable watch, append ‘#!watch’
+                    </pre></code>
+                <p>NOT for production</p>
+            </section>
             </section>
 
             <section data-transition="linear"  data-background="#D4FF91" data-background-transition="slide">
@@ -513,57 +586,107 @@ p
                 <p><small>no watch</small></p>
             </section>
 
-            <section data-transition="linear" data-background-transition="slide">
-                <h1>Examples</h1>
-                <h3 class="sub">Who uses it?</h3>
-                <p class="fragment grow">Reveal theme with Sass</p>
-                <p class="fragment grow">Bootstrap theme with Less</p>
-                <p class="fragment grow">Topcoat with Stylus</p>
+        <section data-transition="linear" data-background-transition="slide">
+            <h1>YES, I can!</h1>
+            <img src="images/candoit.jpg" width="50%"><br/>
+            <p class="fragment grow">Reverse engineer my <span class="css">CSS</span> into Sass</p>
+            <p class="fragment grow">Start with color <span class="css">variables</span>,
+            <span class="css">progressively</span> use <span class="css">mixin</span> for code reusability</p>
+            <p class="fragment grow">Investigate <span class="css">built-in</span> libraries</p>
+            <p class="fragment grow">Build my own <span class="css">CSS toolbox</span></p>
+        </section>
 
-            </section>
+            <!--<section data-transition="linear" data-background-transition="slide">-->
+                <!--<h1>Examples</h1>-->
+                <!--<h3 class="sub">Who uses it?</h3>-->
+                <!--<p class="fragment grow">Reveal theme with Sass</p>-->
+                <!--<p class="fragment grow">Bootstrap theme with Less</p>-->
+                <!--<p class="fragment grow">Topcoat with Stylus</p>-->
 
-            <section data-transition="linear" data-background-transition="slide">
-                <h2>aerogear.org</h2>
-                <p>Take one web site and decline it in Sass, Less ans Stylus</p>
-                <a href="https://github.com/corinnekrych/aerogear.org/blob/sass/README.md">Sass branch</a> <br/>
-                <a href="https://github.com/corinnekrych/aerogear.org/blob/stylus/README.md">Stylus branch</a>
-            </section>
+            <!--</section>-->
 
-            <section data-transition="linear" data-background-transition="slide">
-                <h2>Reveal theme</h2>
-                <p>TODO </p>
-            </section>
+            <!--<section data-transition="linear" data-background-transition="slide">-->
+                <!--<h2>aerogear.org</h2>-->
+                <!--<p>Take one web site and decline it in Sass, Less ans Stylus</p>-->
+                <!--<a href="https://github.com/corinnekrych/aerogear.org/blob/sass/README.md">Sass branch</a> <br/>-->
+                <!--<a href="https://github.com/corinnekrych/aerogear.org/blob/stylus/README.md">Stylus branch</a>-->
+            <!--</section>-->
 
-            <section data-transition="linear" data-background-transition="slide">
-                <h2>Bootstrap</h2>
-                <p>TODO </p>
-            </section>
+            <!--<section data-transition="linear" data-background-transition="slide">-->
+                <!--<h2>Reveal theme</h2>-->
+                <!--<p>TODO </p>-->
+            <!--</section>-->
 
-            <section data-transition="linear" data-background-transition="slide">
-                <h2>Topcoat</h2>
-                <p>TODO I want to show fabrice's component: https://github.com/topcoat/button-list </p>
-            </section>
+            <!--<section data-transition="linear" data-background-transition="slide">-->
+                <!--<h2>Bootstrap</h2>-->
+                <!--<p>TODO </p>-->
+            <!--</section>-->
+
+            <!--<section data-transition="linear" data-background-transition="slide">-->
+                <!--<h2>Topcoat</h2>-->
+                <!--<p>TODO I want to show fabrice's component: https://github.com/topcoat/button-list </p>-->
+            <!--</section>-->
 
             <section data-transition="linear" data-background-transition="slide">
                 <h1>Delving further</h1>
                 <img src="images/gateau.jpg" width="50%"><br/>
             </section>
-            <section data-transition="linear"  data-background="#FFB4EA" data-background-transition="slide">
-                <h2>SASS + Compass</h2>
-                <p>When talking about SASS, Compass will often be mentioned in tandem. But what is it?</p>
-                <p>SASS is the actual preprocessor, defining the underlying language.</p>
-                <p>Compass is a (optional) framework built on top of SASS.</p>
-            </section>
-            <section data-transition="linear"  data-background="#FFB4EA" data-background-transition="slide">
-                <h2>What can Compass do?</h2>
-                <p>It provides common mixins for all CSS3 properties. People have written similar mixin libraries for Less etc.</p>
-                <p>The extra bit that Compass affords you however, are the additional utilities to help you with common layout tasks and more complex things like spriting.</p>
-            </section>
-            <section data-transition="linear"  data-background="#D4FF91" data-background-transition="slide">
-                <h2>Nib for Stylus</h2>
-                <p>Early stage</p>
-                <p>Vendor Prefixes for gradient</p>
-            </section>
+
+
+        <section data-transition="linear" data-background-transition="slide">
+            <h1>Topcoat</h1>
+            <p>CSS for <span class="css">clean</span> and <span class="css">fast</span> web apps</p>
+            <p>Fabrice's contribution</p>
+            <img src="images/fabrice_contrib.png" width="50%"><br/>
+            <p>took him 2 hours work <span class="css">tbh</span> :P</p>
+            <p><span class="css">reusability</span> at its best</p>
+        </section>
+
+
+        <section data-transition="linear" data-background-transition="slide">
+            <h1>Topcoat</h1>
+            <p>Existing <span class="css">button-bar</span></p>
+            <div class="topcoat-button-bar">
+                <div class="topcoat-button-bar__item">
+                    <button class="topcoat-button-bar__button">One</button>
+                </div>
+                <div class="topcoat-button-bar__item">
+                    <button class="topcoat-button-bar__button">Two</button>
+                </div>
+                <div class="topcoat-button-bar__item">
+                    <button class="topcoat-button-bar__button">Three</button>
+                </div>
+            </div> <br/>
+
+            <div class="topcoat-button-bar">
+            <div class="topcoat-button-list__item">
+                <button class="topcoat-button-list__button">One</button>
+            </div>
+            <div class="topcoat-button-list__item">
+                <button class="topcoat-button-list__button">Two</button>
+            </div>
+            <div class="topcoat-button-list__item">
+                <button class="topcoat-button-list__button">Three</button>
+            </div>
+                </div>
+        </section>
+
+            <!--<section data-transition="linear"  data-background="#FFB4EA" data-background-transition="slide">-->
+                <!--<h2>SASS + Compass</h2>-->
+                <!--<p>When talking about SASS, Compass will often be mentioned in tandem. But what is it?</p>-->
+                <!--<p>SASS is the actual preprocessor, defining the underlying language.</p>-->
+                <!--<p>Compass is a (optional) framework built on top of SASS.</p>-->
+            <!--</section>-->
+            <!--<section data-transition="linear"  data-background="#FFB4EA" data-background-transition="slide">-->
+                <!--<h2>What can Compass do?</h2>-->
+                <!--<p>It provides common mixins for all CSS3 properties. People have written similar mixin libraries for Less etc.</p>-->
+                <!--<p>The extra bit that Compass affords you however, are the additional utilities to help you with common layout tasks and more complex things like spriting.</p>-->
+            <!--</section>-->
+            <!--<section data-transition="linear"  data-background="#D4FF91" data-background-transition="slide">-->
+                <!--<h2>Nib for Stylus</h2>-->
+                <!--<p>Early stage</p>-->
+                <!--<p>Vendor Prefixes for gradient</p>-->
+            <!--</section>-->
 
         <section data-transition="linear" data-background-transition="slide">
             <img src="images/thats-all-folks.jpg" width="80%"><br/>
