@@ -1,4 +1,72 @@
-<!doctype html>
+<!DOCTYPE html [
+        <!ELEMENT html (head|body)*>
+        <!ATTLIST html
+                lang CDATA #REQUIRED>
+        <!ELEMENT head (meta|title|link|script|style)*>
+        <!ELEMENT meta (#PCDATA)>
+        <!ATTLIST meta
+                charset CDATA #IMPLIED
+                content CDATA #IMPLIED
+                name CDATA #IMPLIED>
+        <!ELEMENT title (#PCDATA)>
+        <!ELEMENT link (#PCDATA)>
+        <!ATTLIST link
+                href CDATA #REQUIRED
+                id CDATA #IMPLIED
+                rel CDATA #REQUIRED>
+        <!ELEMENT script (#PCDATA)>
+        <!ATTLIST script
+                src CDATA #IMPLIED>
+        <!ELEMENT style (#PCDATA)>
+        <!ELEMENT body (div|script)*>
+        <!ELEMENT div (div|section|a|br|p)*>
+        <!ATTLIST div
+                class CDATA #REQUIRED
+                data-background-transition CDATA #IMPLIED>
+        <!ELEMENT section (p|h1|h2|div|img|br|h3|pre|iframe|a)*>
+        <!ATTLIST section
+                data-background CDATA #IMPLIED
+                data-background-transition CDATA #REQUIRED
+                data-transition CDATA #REQUIRED>
+        <!ELEMENT p (span|small|br|img|em)*>
+        <!ATTLIST p
+                class CDATA #IMPLIED
+                style CDATA #IMPLIED>
+        <!ELEMENT span (span)*>
+        <!ATTLIST span
+                class CDATA #IMPLIED>
+        <!ELEMENT small (a|span)*>
+        <!ELEMENT a (img)*>
+        <!ATTLIST a
+                href CDATA #REQUIRED>
+        <!ELEMENT br (#PCDATA)>
+        <!ELEMENT img (#PCDATA)>
+        <!ATTLIST img
+                alt CDATA #IMPLIED
+                class CDATA #IMPLIED
+                src CDATA #REQUIRED
+                width CDATA #REQUIRED>
+        <!ELEMENT h1 (#PCDATA)>
+        <!ELEMENT h2 (span)*>
+        <!ELEMENT h3 (#PCDATA)>
+        <!ATTLIST h3
+                class CDATA #IMPLIED>
+        <!ELEMENT pre (code)*>
+        <!ATTLIST pre
+                style CDATA #IMPLIED>
+        <!ELEMENT code (#PCDATA)>
+        <!ATTLIST code
+                contenteditable CDATA #REQUIRED
+                data-trim CDATA #REQUIRED>
+        <!ELEMENT em (#PCDATA)>
+        <!ELEMENT iframe (#PCDATA)>
+        <!ATTLIST iframe
+                width CDATA #REQUIRED
+                height CDATA #REQUIRED
+                src CDATA #REQUIRED
+                allowfullscreen CDATA #REQUIRED
+                frameborder CDATA #REQUIRED>
+        ]>
 <html lang="en">
 
 <head>
@@ -16,7 +84,8 @@
 
     <link rel="stylesheet" href="css/reveal.min.css">
     <link rel="stylesheet" href="css/theme/beige.css" id="theme">
-
+    <link rel="stylesheet" type="text/css" href="css/topcoat-button-bar-mobile-light.css">
+    <link rel="stylesheet" type="text/css" href="css/topcoat-button-list-mobile-light.css">
     <!-- For syntax highlighting -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
 
@@ -74,41 +143,60 @@
             <p><span class="css">CSS preprocesors</span> take code written in preprocessed language and then convert that code into <span class="css">POCSS</span></p> <p>- Plain Old CSS - in case you're puzzled</p>
         </section>
 
-        <section data-transition="linear" data-background-transition="slide">
             <section data-transition="linear" data-background-transition="slide">
                 <h1>Which tools?</h1>
                 <h2>Less, SASS &amp; Stylus</h2>
                 <p>There are a variety of CSS preprocessors, the main contenders being <span class="css">Less</span>, <span class="css">SASS</span> and <span class="css">Stylus...</p>
 
-                <p>80% of SASS, LESS and Stylus is the same</p>
+                <p><span class="css">80%</span> of SASS, LESS and Stylus is the <span class="css">same</span></p>
             </section>
             <section data-transition="linear" data-background="#FFB4EA" data-background-transition="slide">
                 <div class="column">
-                    <img width="75%" src="images/sass.png" alt="Less" class="less-logo"><br/>
-                    <a href="http://sass-lang.com/">http://sass-lang.com/</a>
+                    <a href="http://sass-lang.com/"><img width="50%" src="images/sass.png" alt="Less" class="less-logo"></a><br/>
+                    <p class="fragment highlight-red"><span class="css">S</span>yntactically <span class="css">A</span>wesome <span class="css">S</span>tyle <span class="css">S</span>heets</p>
+                    <p class="fragment highlight-red">mature</p>
+                    <p><small>the oldest, full of libraries available</small></p>
+                    <p class="fragment highlight-red">strong community</p>
+                    <p><small>latest addition <a href="http://css-tricks.com/introducing-scut-new-sass-utility-library/">Scut</a> (thanks Matthieu for tweeting)</small></p>
+                    <p class="fragment highlight-red">based on ruby</p>
+                    <p><small>does it matter?</small></p>
                 </div>
             </section>
             <section data-transition="linear" data-background="#5249FF" data-background-transition="slide">
                 <div class="column">
-                    <img width="75%" src="images/less.jpg" alt="Less" class="less-logo"> <br/>
-                    <a href="http://lesscss.org/">http://lesscss.org/</a>
+                    <a href="http://lesscss.org/"><img width="50%" src="images/less-css-logo.png" alt="Less" class="less-logo"></a> <br/>
+                    <p class="fragment highlight-red"><span class="css">Less</span> CSS</p>
+                    <p class="fragment highlight-red">buzz</p>
+                    <p><small>made popular by Twitter Bootstrap</small></p>
+                    <p class="fragment highlight-red">based on JS</p>
+                    <p><small>does it matter?</small></p>
                 </div>
             </section>
             <section data-transition="linear" data-background="#D4FF91" data-background-transition="slide">
                 <div class="column">
-                    <img width="75%" src="images/stylus.png" alt="Less" class="less-logo"><br/>
-                    <a href="http://learnboost.github.com/stylus/">http://learnboost.github.com/stylus/</a>
+                    <a href="http://learnboost.github.com/stylus/"><img width="50%" src="images/stylus.png" alt="Less" class="less-logo"></a><br/>
+                    <p class="fragment highlight-red">CSS with <span class="css">style</span></p>
+                    <p class="fragment highlight-red">youngest</p>
+                    <p><small>made popular by Topcoat</small></p>
+                    <p class="fragment highlight-red">based on JS</p>
+                    <p><small>but again does it matter?</small></p>
                 </div>
             </section>
-        </section>
+            <section data-transition="linear" data-background-transition="slide">
+                <h1>Which one?</h1>
+                <img src="images/baby_puzzled.jpg" width="50%"><br/>
+                <h3 class="sub">Too much choices?</h3>
+                <p>Remember <span class="css">80%</span> implement the <span class="css">same</span> features</p>
+                <p>For code snippet we use <span class="css">SASS</span> unless stated.</p>
+            </section>
+
 
         <section data-transition="linear" data-background-transition="slide">
             <h1>Problem to Solve</h1>
             <img src="images/bay_worried.jpg" width="50%"><br/>
-            <i>How to stay DRY using CSS</i>
+            <p>How to stay <span class="css">DRY</span> using CSS</p>
         </section>
 
-        <section data-transition="linear" data-background-transition="slide">
         <section data-transition="linear" data-background-transition="slide">
             <h2>Problem 1. Selector Repetition</h2>
 
@@ -143,7 +231,7 @@
         </pre>
             </code>
 
-            <p>I don't want to keep writing <em>module</em> again and again. It's tedious!
+            <p>I don't want to <span class="css">keep writing</span> <em>module</em> again and again. It's tedious and <span class="css">repetitive</span>!
             </p>
         </section>
 
@@ -180,279 +268,272 @@
             <p class="fragment fade-in">Prepocessors take this and <span class="css">compile</span> it down to CSS for you.</p>
             <p class="fragment fade-in">JUST the same syntax fo <span class="css">Less</span> and <span class="css">Stylus</span></p>
             <p class="fragment fade-in"><span class="css">2 syntaxes:</span> sassy scss (.scss) or sass syntax (.sass)</p>
-            <p class="fragment fade-in">For stylus too you can opt to keep ; and {} </p>
+            <p class="fragment fade-in">For <span class="css">stylus</span>, 2 syntaxes supported, <span class="css">Less</span> uses "sassy" syntax</p>
         </section>
 
-
-        </section>
-
-
-        <section data-transition="linear" data-background-transition="slide">
         <section data-transition="linear" data-background-transition="slide">
             <h2>Problem 2. Repeating values</h2>
 
-            <p>Quite often in CSS we may want to use the same value again and again for something. E.g. colours,
-                widths:</p>
+            <p>Quite often in CSS we stick to a color palette</p>
+            <p>The whole point is to <span class="css">reuse</span> colors.</p>
         <pre><code data-trim contenteditable>
-body {
-  color: #424242; /* Set the base text colour */
+h1 {
+  font-size: 2em;
+  text-color: #669eb2;
 }
-a {
-  color: blue; /* Highlight links in blue */
-  text-decoration: none; /* Without an underline */
+h2 {
+  font-size: 1.75em;
+  text-color: #e25027;
 }
-a:hover {
-  color: #424242; /* Restore the base colour on hover */
-  text-decoration: underline;
+h3 {
+  font-size: 1.25em;
+  text-color: #669eb2;
+}
+h4 {
+  font-size: 1em;
+  margin-top: 3em;
+  text-color: #e25027;
 }
         </pre>
             </code>
 
-            <p>In this trivial example, we've repeated that <em>#424242</em> colour value twice but it doesn't have to
-                be this way.</p>
+            <p><span class="css">copy/paste</span> is my only option...</p>
         </section>
 
-         <section data-transition="linear" data-background="#FFB4EA" data-background-transition="slide">
+         <section data-transition="linear" data-background-transition="slide">
             <h2>Solution 2. Variables</h2>
 
-            <p>CSS Preprocessors let you define variables for subsequent use in your stylesheet:</p>
+            <p>CSS Preprocessors let you define <span class="css">variables!<span></p>
         <pre><code data-trim contenteditable>
-$base-colour: #424242; /* Variable to hold our base colour*/
-body {
-    color: $base-colour; /* Set the base text colour */
-}
-
-a {
-   color: blue; /* Highlight links in blue */
-   text-decoration: none; /* Without an underline */
-}
-a:hover {
-    color: $base-colour; /* Restore the base colour on hover */
-    text-decoration: underline;
-}
+/* Variables to hold our base colour, size */
+$gear-color: #669eb2
+$aero-color: #e25027
+$reference-size: 1em
+h1
+  font-size: $reference-size + 1em
+  text-color: $gear-color
+h2
+  font-size: $reference-size + 0.75em
+  text-color: $aero-color
+h3
+  font-size: $reference-size + 0.25em
+  text-color: $gear-color
+h4
+  font-size: $reference_size
+  margin-top: 3em
+  text-color:$aero_gear;
         </pre>
             </code>
-        </section>
+             <p class="fragment fade-in"><span class="css">SASS</span> syntax</p>
+             <p class="fragment fade-in"><small>In Sass, <span class="css">$reference_size</span> same as <span class="css">$reference-size</span> </small></p>
+             <p class="fragment fade-in">Small differences in syntax for <span class="css">Less</span> and <span class="css">Stylus</span></p>
+             <p class="fragment fade-in">Operation on variables</span></p>
+         </section>
+          <section data-transition="linear" data-background-transition="slide">
+              <h2>Just for that...</h2>
 
-        <section data-transition="linear" data-background="#5249FF" data-background-transition="slide">
-            <h2>Solution 2: revisited with LESS</h2>
+              <img src="images/baby-satisfied1.jpg" width="50%"><br/>
+              <p>I would work with a <span class="css">CSS preprocessor</span></p>
+            </section>
 
-        <pre><code data-trim contenteditable>
-            TODO LESS
-        </pre>
-            </code>
-        </section>
-        <section data-transition="linear" data-background="#D4FF91" data-background-transition="slide">
-            <h2>Solution 2: revisited with Stylus</h2>
 
-        <pre><code data-trim contenteditable>
-            TODO STYLUS
-
-        </pre>
-            </code>
-        </section>
-        </section>
-
-        <section data-transition="linear" data-background-transition="slide">
         <section data-transition="linear" data-background-transition="slide">
             <h2>Problem 3. Vendor prefixes</h2>
-            <p>Anyone who writes CSS for a living will be familiar with CSS full of vendor prefixes like the following:</p>
+            <p>Annoyed by CSS full of <span class="css">vendor prefixes</span>?</p>
             <pre><code data-trim contenteditable>
-                .foo {
-                background: #87e0fd;
-                background: -moz-linear-gradient(top,  #87e0fd 0%, #05abe0 100%);
-                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#87e0fd), color-stop(100%,#05abe0));
-                background: -webkit-linear-gradient(top,  #87e0fd 0%,#05abe0 100%);
-                background: -o-linear-gradient(top,  #87e0fd 0%,#05abe0 100%);
-                background: -ms-linear-gradient(top,  #87e0fd 0%,#05abe0 100%);
-                background: linear-gradient(to bottom,  #87e0fd 0%,#05abe0 100%);
-                }
+.foo {
+  background: #87e0fd;
+  background: -moz-linear-gradient(top,  #87e0fd 0%, #05abe0 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#87e0fd), color-stop(100%,#05abe0));
+  background: -webkit-linear-gradient(top,  #87e0fd 0%,#05abe0 100%);
+  background: -o-linear-gradient(top,  #87e0fd 0%,#05abe0 100%);
+  background: -ms-linear-gradient(top,  #87e0fd 0%,#05abe0 100%);
+  background: linear-gradient(to bottom,  #87e0fd 0%,#05abe0 100%);
+}
         </pre>
             </code>
-            <p>The internet is full of handy tools to generate this code <em>(E.g. http://www.colorzilla.com/gradient-editor)</em>. They're pretty useful...</p>
-            <p>The code that comes out is properly ugly however. I don't want to read that gibberish!</p>
-        </section>
-
-        <section data-transition="linear" data-background="#FFB4EA" data-background-transition="slide">
-            <h2>Solution 3. "Mixins" to the rescue</h2>
-            <p>CSS Preprocessors can help us out here too, with a construct known as a "Mixin":</p>
-            <pre><code data-trim contenteditable>
-                .foo {
-                background-color: #87e0fd;
-                @include background-image(
-                linear-gradient(
-                top,
-                #87e0fd 0%,
-                #05abe0 100%
-                )
-                );
-                }
-                </pre>
-                </code>
-            <p class="note">N.B: The above example is SASS and uses a mixin built into the Compass framework.</p>
-            <p>In this example the CSS preprocessor has let us write a nice clear statement instead of 7 lines of repetitive nonsense.</p>
-            <p>I for one would much rather maintain this second example! Need to update a colour? Do it once, not 7 times!</p>
-        </section>
-
-         <section data-transition="linear" data-background="#5249FF" data-background-transition="slide">
-                <h2>Solution 3: revisited with LESS</h2>
-
-        <pre><code data-trim contenteditable>
-            TODO LESS
-        </pre>
-                </code>
-        </section>
-        <section data-transition="linear" data-background="#D4FF91" data-background-transition="slide">
-                <h2>Solution 3: revisited with Stylus</h2>
-
-        <pre><code data-trim contenteditable>
-            TODO STYLUS
-
-        </pre>
-        </code>
-        </section>
-
-        <section data-transition="linear"  data-background-transition="slide">
-            <h2>Declaring your own mixins</h2>
-            <p>Mixins can either be defined yourself or there are a variety of libraries on the internet with common ones predefined (E.g. Mixins for all CSS3 properties).</p>
-            <pre><code data-trim contenteditable>
-                @mixin button {
-                @include inline-block;
-                @include box-shadow(0 0 3px rgba(0,0,0,0.25));
-                @include background(#424242 linear-gradient(top, #424242, #000));
-                @include border-radius(5px);
-                color: #fff;
-                padding: 10px;
-                font-size: 15px;
-                line-height: normal;
-                }
-
-                #defining-mixins {
-                a {
-                @include button;
-                }
-                }
-                </pre>
-                </code>
-            <p class="note">N.B. Example is SASS. Syntax varies between languages, but the core concept remains the same.</p>
-            <p><a href="#">I'm a button!</a></p>
-        </section>
-
-        <section data-transition="linear"  data-background-transition="slide">
-            <h2>Getting a bit more fancy!</h2>
-            <pre><code data-trim contenteditable>
-                @mixin button2($color: #424242) {
-                @include inline-block;
-                @include box-shadow(0 0 3px transparentize($color, 0.5));
-                @include background(linear-gradient(top, $color, darken($color, 30%)));
-                @include border-radius(5px);
-                text-shadow: 0 1px 3px contrast-color($color, #fff, #000);
-                color: contrast-color($color, #000, #fff);
-                padding: 10px;
-                font-size: 15px;
-                line-height: normal;
-                margin-right: 10px;
-                }
-
-                #fancy-mixins {
-                a {
-                @include button2(#cdcdcd);
-
-                &.warning {
-                @include button2(#7a0000);
-                }
-                }
-                }
-                </pre>
-                </code>
-            <p><a class="warning" href="#">Cancel</a><a href="#">I'm a button!</a></p>
-        </section>
+            <p class="fragment fade-in">Can be fixed using <span class="css">mixin</span></p>
         </section>
 
         <section data-transition="linear" data-background-transition="slide">
-            <section data-transition="linear" data-background-transition="slide">
-                <h2>Problem 4. Mobile/Desktop</h2>
-
-                <p>media queries, multiple files</p>
-        <pre><code data-trim contenteditable>article {
-TODO
+            <h2>Solution 3. Mixin</h2>
+            <p>Annoyed by CSS full of <span class="css">vendor prefixes</span>?</p>
+            <pre><code data-trim contenteditable>
+.foo {
+  background-color: #87e0fd;
+  @include background-image(
+    linear-gradient(
+      top,
+      #87e0fd 0%,
+      #05abe0 100%
+    )
+  );
+}
         </pre>
-                </code>
-            </section>
-
-            <section data-transition="linear" data-background="#FFB4EA" data-background-transition="slide">
-                <h2>Solution 4: conditional, import</h2>
-
-                <p>What if, instead of repeating ourselves, we could do this:</p>
-        <pre><code data-trim contenteditable>article {
-TODO
-        </pre>
-                </code>
-             </section>
-            <section data-transition="linear" data-background="#5249FF" data-background-transition="slide">
-                <h2>Solution 4: revisited with LESS</h2>
-
-        <pre><code data-trim contenteditable>
-            TODO LESS
-        </pre>
-                </code>
-            </section>
-            <section data-transition="linear" data-background="#D4FF91" data-background-transition="slide">
-                <h2>Solution 4: revisited with Stylus</h2>
-
-        <pre><code data-trim contenteditable>
-            TODO STYLUS
-
-        </pre>
-                </code>
-            </section>
+            </code>
+            <p class="fragment fade-in">Less <span class="css">redundancy</span></p>
+            <p class="fragment fade-in">Use a mixin built into the <span class="css">Compass</span> framework</p>
         </section>
 
         <section data-transition="linear" data-background-transition="slide">
-            <section data-transition="linear" data-background-transition="slide">
-                <h2>Problem 5. Color gradient</h2>
+            <h2>Problem 3. Vendor prefixes <span class="css">Revisited</span></h2>
 
-                <p>Cherry on the cake</p>
-        <pre><code data-trim contenteditable>
-            TODO
-        </pre>
-                </code>
-            </section>
-
-            <section data-transition="linear" data-background="#FFB4EA" data-background-transition="slide">
-                <h2>Solution 5: color transformation</h2>
-
-        <pre><code data-trim contenteditable>
-            TODO
-        </pre>
-                </code>
-            </section>
-            <section data-transition="linear" data-background="#5249FF" data-background-transition="slide">
-                <h2>Solution 4: revisited with LESS</h2>
-        <pre><code data-trim contenteditable>
-            TODO LESS
-        </pre></code>
-            </section>
-            <section data-transition="linear" data-background="#D4FF91" data-background-transition="slide">
-                <h2>Solution 4: revisited with Stylus</h2>
-
-        <pre><code data-trim contenteditable>
-            TODO STYLUS
-       </pre>
-                </code>
-            </section>
+            <p class="fragment fade-in">Perfect use case for <span class="css">preprocessor</span> usage</p>
+            <p class="fragment fade-in"><span class="css">Really</span> ???</p>
         </section>
+
+        <section data-transition="linear" data-background-transition="slide">
+            <h2>Problem 3. What are vendor prefixes?</h2>
+            <p><span class="css">Prefixes</span> to add support for new <span class="css">CSS features</span></p>
+            <pre>
+                    Android: -webkit-
+                    Chrome: -webkit-
+                    Firefox: -moz-
+                    Internet Explorer: -ms-
+                    iOS: -webkit-
+                    Opera: -o-
+                    Safari: -webkit- </pre>
+
+            <p class="fragment fade-in">By nature, they are <span class="css">temporary</span></p>
+            <p class="fragment fade-in">Don't assume properties are named the <span class="css">same</span></p>
+            <p class="fragment fade-in"><small>use a generic mixin to generate them, <span class="css">won't</span> work</small></p>
+            <p class="fragment fade-in">Use well maintained libraries like  <span class="css">Compass</span> or <span class="css">Bourbon</span></p>
+            <p class="fragment fade-in">Even better... </p>
+        </section>
+
+        <section data-transition="linear" data-background-transition="slide">
+            <h2>postpro<span class="css">C</span>e<span class="css">SS</span>or</h2>
+            <img src="images/2babies.jpg" width="50%"><br/>
+            <p class="fragment fade-in"><span class="css">post</span>processor to fix <span class="css">pre</span>fixes ;)</p>
+            <p class="fragment fade-in">like <span class="css">Autoprefixer</span> is kept up to date with <span class="css">can I use</span> database</p>
+        </section>
+
+        <section data-transition="linear" data-background-transition="slide">
+            <h2>Problem 4. CSS pattern</h2>
+            <p>For example: <span class="css">vertical align</span> text</p>
+            <p>to be applied several times on different context</p>
+            <p>with different variant</p>
+        </section>
+
+        <section data-transition="linear" data-background-transition="slide">
+            <h2>Solution 4. mixin with parameter</h2>
+            <p>build your own <span class="css">toolkit</span></p>
+            <p>or reuse <span class="css">toolkit</span> like SCUT</p>
+            <pre><code data-trim contenteditable>
+    @mixin vertically-center ($child: ".vcentered") {
+      display: table;
+      & > #{$child} {
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+        </pre>
+            </code>
+            <p class="fragment fade-in">Avoid <span class="css">repetition</span></p>
+            <p class="fragment fade-in"><small>use parameter, here with default value</small></p>
+            <p class="fragment fade-in"><span class="css">Organize</span> code</p>
+            <p class="fragment fade-in"><span class="css">Reuse</span> code</p>
+
+        </section>
+        <section data-transition="linear" data-background-transition="slide">
+            <h2>Solution4. more mixin</h2>
+            <p>Going <span class="css">further</span> with <span class="css">CSS features</span></p>
+            <iframe width="100%" height="300" src="http://jsfiddle.net/jitendravyas/cxJtc/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+            <p class="fragment fade-in">Include block with <span class="css">@content</span></p>
+            <p class="fragment fade-in">Loop with <span class="css">@for</span></p>
+            <p class="fragment fade-in">Use mixin with <span class="css">@include</span></p>
+        </section>
+
+        <section data-transition="linear" data-background-transition="slide">
+                <h2>Problem 5. Mobile/Desktop</h2>
+                <p><span class="css">@media</span> queries block <span class="css">scatters</span> styles rules</p>
+        <pre><code data-trim contenteditable>
+p {
+  max-width: 960px;
+}
+.feature {
+  max-width: 960px;
+}
+
+..... Lots of other CSS rules here
+
+/*  AeroGear custom styles for Tablets, break point: 848px */
+@media only screen and (max-width: 848px) {
+    p {
+        max-width: 720px;
+    }
+    .feature {
+        max-width: 720px;
+    }
+}
+        </pre>
+                </code>
+            </section>
+
+            <section data-transition="linear" data-background-transition="slide">
+                <h2>Solution 5: @media</h2>
+
+                <p>What if, we could keep the logic at <span class="css">one place</span></p>
+        <pre><code data-trim contenteditable>
+p
+  max-width: 960px;
+  @media only screen and (max-width: 656px)
+    max-width: 720px;
+.feature
+  max-width: 960px;
+  @media only screen and (max-width: 656px)
+    max-width: 720px;
+} </pre>
+                </code>
+                <p>All CSS on HTML element are grouped in a same <span class="css">place</span></p>
+                <p>but I repeat @media <span class="css">WAIT</span>...</small></p>
+            </section>
+
+            <section data-transition="linear" data-background-transition="slide">
+                <h2>I'm not DRY</h2>
+                <p>anymore</p>
+                <img src="images/cute-baby-girl.jpg" width="50%"><br/>
+            </section>
+
+            <section data-transition="linear" data-background-transition="slide">
+                <h2>Solution 5: Going further<span class="css">@mixin @if</span></h2>
+
+                <p>Parametrized <span class="css">break point!</span></p>
+        <pre><code data-trim contenteditable>
+$break-phone:656px
+$break-tablet:848px
+@mixin respond-to($media-size)
+  @if $media-size == phone
+    @media only screen and (max-width: $break-phone)
+      @content
+  @else if $media-size == tablet
+    @media only screen and (min-width:$break-phone + 1) and (max-width: $break-tablet - 1)
+      @content
+  @else if $media-size == desktop
+    @media only screen and (min-width: $break-tablet)
+      @content
+
+p
+  @include respond-to(desktop)
+    max-width: 960px
+  @include respond-to(tablet)
+    max-width: 720px
+
+        </pre>
+                </code>
+        </section>
+
 
         <section data-transition="linear" data-background-transition="slide">
             <h1>I can stay DRY!</h1>
             <img src="images/baby.jpg" width="50%"><br/>
         </section>
 
-        <section data-transition="linear" data-background-transition="slide">
             <section data-transition="linear" data-background-transition="slide">
                 <h1>How?</h1>
                 <img src="images/baby_unhappy.jpg" width="50%"><br/>
-                <h3 class="sub">Ok great, but how do I use one of these preprocessors?</h3>
+                <p>Is it <span class="css">difficult</span> to use?</p>
             </section>
 
             <section data-transition="linear"  data-background="#FFB4EA" data-background-transition="slide">
@@ -471,8 +552,21 @@ TODO
 
             <section data-transition="linear"  data-background="#5249FF"data-background-transition="slide">
                 <h2>Getting starting with Less</h2>
-                <h3>Install</h3>
-                <h3>Compile</h3>
+                <p>Install</p>
+                    <pre><code data-trim contenteditable>
+                        >  npm install -g less</pre></code>
+                     <p>Compile</p>
+                    <pre><code data-trim contenteditable>
+                        >  lessc styles.less</pre></code>
+                <p>Dev mode</p>
+                    <pre><code data-trim contenteditable>// include JS
+<script src="less.js" type="text/javascript"></script>
+// include less file
+<link rel="stylesheet/less" type="text/css" href="styles.less" />
+// To enable watch, append ‘#!watch’
+                    </pre></code>
+                <p>NOT for production</p>
+            </section>
             </section>
 
             <section data-transition="linear"  data-background="#D4FF91" data-background-transition="slide">
@@ -491,71 +585,108 @@ TODO
                         >  stylus css</pre></code>
                 <p><small>no watch</small></p>
             </section>
-            <section data-transition="linear" data-background-transition="slide">
-                <h1>Which one?</h1>
-                <img src="images/baby_puzzled.jpg" width="50%"><br/>
-                <h3 class="sub">Too much choices?</h3>
-                <p>Remember 80% implement the same features</p>
-            </section>
-        </section>
 
         <section data-transition="linear" data-background-transition="slide">
-            <section data-transition="linear" data-background-transition="slide">
-                <h1>Examples</h1>
-                <h3 class="sub">Who uses it?</h3>
-                <p class="fragment grow">Reveal theme with Sass</p>
-                <p class="fragment grow">Bootstrap theme with Less</p>
-                <p class="fragment grow">Topcoat with Stylus</p>
-
-            </section>
-
-            <section data-transition="linear" data-background-transition="slide">
-                <h2>aerogear.org</h2>
-                <p>Take one web site and decline it in Sass, Less ans Stylus</p>
-                <a href="https://github.com/corinnekrych/aerogear.org/blob/sass/README.md">Sass branch</a> <br/>
-                <a href="https://github.com/corinnekrych/aerogear.org/blob/stylus/README.md">Stylus branch</a>
-            </section>
-
-            <section data-transition="linear" data-background-transition="slide">
-                <h2>Reveal theme</h2>
-                <p>TODO </p>
-            </section>
-
-            <section data-transition="linear" data-background-transition="slide">
-                <h2>Bootstrap</h2>
-                <p>TODO </p>
-            </section>
-
-            <section data-transition="linear" data-background-transition="slide">
-                <h2>Topcoat</h2>
-                <p>TODO I want to show fabrice's component: https://github.com/topcoat/button-list </p>
-            </section>
-
-
+            <h1>YES, I can!</h1>
+            <img src="images/candoit.jpg" width="50%"><br/>
+            <p class="fragment grow">Reverse engineer my <span class="css">CSS</span> into Sass</p>
+            <p class="fragment grow">Start with color <span class="css">variables</span>,
+            <span class="css">progressively</span> use <span class="css">mixin</span> for code reusability</p>
+            <p class="fragment grow">Investigate <span class="css">built-in</span> libraries</p>
+            <p class="fragment grow">Build my own <span class="css">CSS toolbox</span></p>
         </section>
 
-        <section data-transition="linear" data-background-transition="slide">
+            <!--<section data-transition="linear" data-background-transition="slide">-->
+                <!--<h1>Examples</h1>-->
+                <!--<h3 class="sub">Who uses it?</h3>-->
+                <!--<p class="fragment grow">Reveal theme with Sass</p>-->
+                <!--<p class="fragment grow">Bootstrap theme with Less</p>-->
+                <!--<p class="fragment grow">Topcoat with Stylus</p>-->
+
+            <!--</section>-->
+
+            <!--<section data-transition="linear" data-background-transition="slide">-->
+                <!--<h2>aerogear.org</h2>-->
+                <!--<p>Take one web site and decline it in Sass, Less ans Stylus</p>-->
+                <!--<a href="https://github.com/corinnekrych/aerogear.org/blob/sass/README.md">Sass branch</a> <br/>-->
+                <!--<a href="https://github.com/corinnekrych/aerogear.org/blob/stylus/README.md">Stylus branch</a>-->
+            <!--</section>-->
+
+            <!--<section data-transition="linear" data-background-transition="slide">-->
+                <!--<h2>Reveal theme</h2>-->
+                <!--<p>TODO </p>-->
+            <!--</section>-->
+
+            <!--<section data-transition="linear" data-background-transition="slide">-->
+                <!--<h2>Bootstrap</h2>-->
+                <!--<p>TODO </p>-->
+            <!--</section>-->
+
+            <!--<section data-transition="linear" data-background-transition="slide">-->
+                <!--<h2>Topcoat</h2>-->
+                <!--<p>TODO I want to show fabrice's component: https://github.com/topcoat/button-list </p>-->
+            <!--</section>-->
+
             <section data-transition="linear" data-background-transition="slide">
                 <h1>Delving further</h1>
                 <img src="images/gateau.jpg" width="50%"><br/>
             </section>
-            <section data-transition="linear"  data-background="#FFB4EA" data-background-transition="slide">
-                <h2>SASS + Compass</h2>
-                <p>When talking about SASS, Compass will often be mentioned in tandem. But what is it?</p>
-                <p>SASS is the actual preprocessor, defining the underlying language.</p>
-                <p>Compass is a (optional) framework built on top of SASS.</p>
-            </section>
-            <section data-transition="linear"  data-background="#FFB4EA" data-background-transition="slide">
-                <h2>What can Compass do?</h2>
-                <p>It provides common mixins for all CSS3 properties. People have written similar mixin libraries for Less etc.</p>
-                <p>The extra bit that Compass affords you however, are the additional utilities to help you with common layout tasks and more complex things like spriting.</p>
-            </section>
-            <section data-transition="linear"  data-background="#D4FF91" data-background-transition="slide">
-                <h2>Nib for Stylus</h2>
-                <p>Early stage</p>
-                <p>Vendor Prefixes for gradient</p>
-            </section>
+
+
+        <section data-transition="linear" data-background-transition="slide">
+            <h1>Topcoat</h1>
+            <p>CSS for <span class="css">clean</span> and <span class="css">fast</span> web apps</p>
+            <p>Fabrice's contribution</p>
+            <img src="images/fabrice_contrib.png" width="50%"><br/>
+            <p>took him 2 hours work <span class="css">tbh</span> :P</p>
+            <p><span class="css">reusability</span> at its best</p>
         </section>
+
+
+        <section data-transition="linear" data-background-transition="slide">
+            <h1>Topcoat</h1>
+            <p>Existing <span class="css">button-bar</span></p>
+            <div class="topcoat-button-bar">
+                <div class="topcoat-button-bar__item">
+                    <button class="topcoat-button-bar__button">One</button>
+                </div>
+                <div class="topcoat-button-bar__item">
+                    <button class="topcoat-button-bar__button">Two</button>
+                </div>
+                <div class="topcoat-button-bar__item">
+                    <button class="topcoat-button-bar__button">Three</button>
+                </div>
+            </div> <br/>
+
+            <div class="topcoat-button-bar">
+            <div class="topcoat-button-list__item">
+                <button class="topcoat-button-list__button">One</button>
+            </div>
+            <div class="topcoat-button-list__item">
+                <button class="topcoat-button-list__button">Two</button>
+            </div>
+            <div class="topcoat-button-list__item">
+                <button class="topcoat-button-list__button">Three</button>
+            </div>
+                </div>
+        </section>
+
+            <!--<section data-transition="linear"  data-background="#FFB4EA" data-background-transition="slide">-->
+                <!--<h2>SASS + Compass</h2>-->
+                <!--<p>When talking about SASS, Compass will often be mentioned in tandem. But what is it?</p>-->
+                <!--<p>SASS is the actual preprocessor, defining the underlying language.</p>-->
+                <!--<p>Compass is a (optional) framework built on top of SASS.</p>-->
+            <!--</section>-->
+            <!--<section data-transition="linear"  data-background="#FFB4EA" data-background-transition="slide">-->
+                <!--<h2>What can Compass do?</h2>-->
+                <!--<p>It provides common mixins for all CSS3 properties. People have written similar mixin libraries for Less etc.</p>-->
+                <!--<p>The extra bit that Compass affords you however, are the additional utilities to help you with common layout tasks and more complex things like spriting.</p>-->
+            <!--</section>-->
+            <!--<section data-transition="linear"  data-background="#D4FF91" data-background-transition="slide">-->
+                <!--<h2>Nib for Stylus</h2>-->
+                <!--<p>Early stage</p>-->
+                <!--<p>Vendor Prefixes for gradient</p>-->
+            <!--</section>-->
 
         <section data-transition="linear" data-background-transition="slide">
             <img src="images/thats-all-folks.jpg" width="80%"><br/>
