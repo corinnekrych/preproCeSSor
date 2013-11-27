@@ -61,16 +61,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="641" column="58" selection-start="26975" selection-end="26975" vertical-scroll-proportion="0.37286612">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="button-bar.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/button-bar.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="88" selection-start="372" selection-end="407" vertical-scroll-proportion="-5.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -79,7 +70,7 @@
       <file leaf-file-name="main.sass" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/aerogear/aerogear.org/sass/main.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="85" selection-start="3221" selection-end="3221" vertical-scroll-proportion="-23.076923">
+            <state line="112" column="85" selection-start="3221" selection-end="3221" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -88,25 +79,7 @@
       <file leaf-file-name="index_reveal_ex.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index_reveal_ex.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="346" column="8" selection-start="11130" selection-end="11181" vertical-scroll-proportion="-8.02">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/aerogear/aerogear.org/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="17" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="iOSCookbook.asciidoc" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/aerogear/aerogear.org/docs/guides/iOSCookbook.asciidoc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="584" column="55" selection-start="27200" selection-end="27200" vertical-scroll-proportion="0.0">
+            <state line="346" column="8" selection-start="11130" selection-end="11181" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -116,15 +89,6 @@
         <entry file="file://$USER_HOME$/aerogear/aerogear.org/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
             <state line="170" column="108" selection-start="4587" selection-end="4587" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="88" selection-start="1193" selection-end="1193" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -217,7 +181,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -318,18 +281,19 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.last.edited" value="SDKs" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.proportion" value="0.0" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
-    <property name="GoToClass.includeLibraries" value="false" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
   <component name="RecentsManager">
@@ -358,6 +322,24 @@
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
@@ -394,24 +376,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -429,6 +393,17 @@
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
@@ -455,17 +430,6 @@
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
@@ -594,16 +558,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/reveal.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="255" column="27" selection-start="5954" selection-end="5957" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="255" column="27" selection-start="5954" selection-end="5957" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/aerogear/aerogear.org/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="17" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="20" column="17" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/aerogear/aerogear.org/docs/guides/iOSCookbook.asciidoc">
@@ -611,58 +571,43 @@
         <state line="584" column="55" selection-start="27200" selection-end="27200" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/aerogear/aerogear.org/css/main.css">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="170" column="108" selection-start="4587" selection-end="4587" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="20" column="88" selection-start="1193" selection-end="1193" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/aerogear/aerogear.org/_layouts/base.html">
+    <entry file="file://$USER_HOME$/aerogear/aerogear.org/sass/main.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="8" selection-start="1385" selection-end="1385" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/aerogear/aerogear.org/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="112" column="85" selection-start="3221" selection-end="3221" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index_reveal_ex.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="346" column="8" selection-start="11130" selection-end="11181" vertical-scroll-proportion="-8.02">
+        <state line="346" column="8" selection-start="11130" selection-end="11181" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/aerogear/aerogear.org/sass/main.sass">
+    <entry file="file://$USER_HOME$/aerogear/aerogear.org/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="85" selection-start="3221" selection-end="3221" vertical-scroll-proportion="-23.076923">
-          <folding />
-        </state>
+        <state line="170" column="108" selection-start="4587" selection-end="4587" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$USER_HOME$/aerogear/aerogear.org/_layouts/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="88" selection-start="1193" selection-end="1193" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="37" column="8" selection-start="1385" selection-end="1385" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/button-bar.html">
+    <entry file="file://$USER_HOME$/aerogear/aerogear.org/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="88" selection-start="372" selection-end="407" vertical-scroll-proportion="-5.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="641" column="58" selection-start="26975" selection-end="26975" vertical-scroll-proportion="0.37286612">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
