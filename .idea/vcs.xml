@@ -3,6 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="" />
     <mapping directory="$USER_HOME$/aerogear/aerogear.org" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../reveal.js" vcs="Git" />
   </component>
 </project>
 

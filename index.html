@@ -71,7 +71,7 @@
 
             <p>Nope ...</p>
 
-            <p><span class="css">CSS preprocesors</span> take code written in preprocessed language and then convert that code into <span class="css">POCSS</span></p> <p>- Plain Old CSS - in case you're puzzled</p>
+            <p><span class="css">CSS preprocessors</span> take code written in preprocessed language and then convert that code into <span class="css">POCSS</span></p> <p>- Plain Old CSS - in case you're puzzled</p>
         </section>
 
             <section data-transition="linear" data-background-transition="slide">
@@ -538,36 +538,6 @@ p
             <p class="fragment grow">Build my own <span class="css">CSS toolbox</span></p>
         </section>
 
-            <!--<section data-transition="linear" data-background-transition="slide">-->
-                <!--<h1>Examples</h1>-->
-                <!--<h3 class="sub">Who uses it?</h3>-->
-                <!--<p class="fragment grow">Reveal theme with Sass</p>-->
-                <!--<p class="fragment grow">Bootstrap theme with Less</p>-->
-                <!--<p class="fragment grow">Topcoat with Stylus</p>-->
-
-            <!--</section>-->
-
-            <!--<section data-transition="linear" data-background-transition="slide">-->
-                <!--<h2>aerogear.org</h2>-->
-                <!--<p>Take one web site and decline it in Sass, Less ans Stylus</p>-->
-                <!--<a href="https://github.com/corinnekrych/aerogear.org/blob/sass/README.md">Sass branch</a> <br/>-->
-                <!--<a href="https://github.com/corinnekrych/aerogear.org/blob/stylus/README.md">Stylus branch</a>-->
-            <!--</section>-->
-
-            <!--<section data-transition="linear" data-background-transition="slide">-->
-                <!--<h2>Reveal theme</h2>-->
-                <!--<p>TODO </p>-->
-            <!--</section>-->
-
-            <!--<section data-transition="linear" data-background-transition="slide">-->
-                <!--<h2>Bootstrap</h2>-->
-                <!--<p>TODO </p>-->
-            <!--</section>-->
-
-            <!--<section data-transition="linear" data-background-transition="slide">-->
-                <!--<h2>Topcoat</h2>-->
-                <!--<p>TODO I want to show fabrice's component: https://github.com/topcoat/button-list </p>-->
-            <!--</section>-->
 
             <section data-transition="linear" data-background-transition="slide">
                 <h1>Delving further</h1>
@@ -576,18 +546,24 @@ p
 
 
         <section data-transition="linear" data-background-transition="slide">
-            <h1>Topcoat</h1>
-            <p>CSS for <span class="css">clean</span> and <span class="css">fast</span> web apps</p>
-            <p>Fabrice's contribution</p>
+            <h2>Topcoat</h2>
+            <p>CSS for <span class="css">clean</span> and <span class="css">fast</span> web apps</p>    <br>
+            <iframe width="100%" height="500" src="demo-topcoat/index.html" allowfullscreen="allowfullscreen" frameborder="0"></iframe><br/> <br/>
+            <p>also exist in <span class="css">light</span> color</p>
+            <p> desktop and mobile version</p>
+        </section>
+
+        <section data-transition="linear" data-background-transition="slide">
+            <h2>Fabrice's contribution</h2>
             <img src="images/fabrice_contrib.png" width="50%"><br/>
             <p>took him 2 hours work <span class="css">tbh</span> :P</p>
             <p><span class="css">reusability</span> at its best</p>
         </section>
 
-
         <section data-transition="linear" data-background-transition="slide">
-            <h1>Topcoat</h1>
+            <h2>button bar/list</h2>
             <p>Existing <span class="css">button-bar</span></p>
+            <div style="max-width:200px;margin: auto">
             <div class="topcoat-button-bar">
                 <div class="topcoat-button-bar__item">
                     <button class="topcoat-button-bar__button">One</button>
@@ -599,7 +575,9 @@ p
                     <button class="topcoat-button-bar__button">Three</button>
                 </div>
             </div> <br/>
-
+                </div>
+            <p>and <span class="css">button-list</span></p>
+                <div style="max-width:100px;margin: auto">
             <div class="topcoat-button-bar">
             <div class="topcoat-button-list__item">
                 <button class="topcoat-button-list__button">One</button>
@@ -611,24 +589,160 @@ p
                 <button class="topcoat-button-list__button">Three</button>
             </div>
                 </div>
+                </div>
         </section>
 
-            <!--<section data-transition="linear"  data-background="#FFB4EA" data-background-transition="slide">-->
-                <!--<h2>SASS + Compass</h2>-->
-                <!--<p>When talking about SASS, Compass will often be mentioned in tandem. But what is it?</p>-->
-                <!--<p>SASS is the actual preprocessor, defining the underlying language.</p>-->
-                <!--<p>Compass is a (optional) framework built on top of SASS.</p>-->
-            <!--</section>-->
-            <!--<section data-transition="linear"  data-background="#FFB4EA" data-background-transition="slide">-->
-                <!--<h2>What can Compass do?</h2>-->
-                <!--<p>It provides common mixins for all CSS3 properties. People have written similar mixin libraries for Less etc.</p>-->
-                <!--<p>The extra bit that Compass affords you however, are the additional utilities to help you with common layout tasks and more complex things like spriting.</p>-->
-            <!--</section>-->
-            <!--<section data-transition="linear"  data-background="#D4FF91" data-background-transition="slide">-->
-                <!--<h2>Nib for Stylus</h2>-->
-                <!--<p>Early stage</p>-->
-                <!--<p>Vendor Prefixes for gradient</p>-->
-            <!--</section>-->
+        <section data-transition="linear"  data-background-transition="slide">
+            <h2>Show me the code</h2>
+            <p><span class="css">@import</span> and <span class="css">@extend</pan></p>
+                    <pre><code data-trim contenteditable>
+@import topcoat-button
+@import button-bar
+
+.topcoat-button-list {
+  @extend .button-bar
+}
+
+/* Custom behavior to display in list*/
+.topcoat-button-list__item {
+    width: auto;
+    border-radius: 0;
+}
+
+/* Custom behavior for top element */
+.topcoat-button-list > .topcoat-button-list__item:first-child {
+    border-top-left-radius: var-border-radius;
+    border-top-right-radius: var-border-radius;
+}
+
+/* Custom behavior for bottom element */
+.topcoat-button-list > .topcoat-button-list__item:last-child {
+    border-bottom-left-radius: var-border-radius;
+    border-bottom-right-radius: var-border-radius;
+}
+
+.topcoat-button-list__item > input {
+  @extend .button-bar__item > input
+}
+
+.topcoat-button-list__item:first-child > .topcoat-button-list__button,
+.topcoat-button-list__item:first-child > .topcoat-button-list__button--large {
+  border-bottom: none;
+}
+
+.topcoat-button-list__item:last-child > .topcoat-button-list__button,
+.topcoat-button-list__item:last-child > .topcoat-button-list__button--large {
+  border-top: none;
+}
+
+.topcoat-button-list__button {
+  @extend .topcoat-button;
+  border-radius: inherit;
+}
+
+/* Custom behavior to size to longest text button */
+.topcoat-button-list__button,
+.topcoat-button-list__button--large {
+    width:100%;
+}
+
+.topcoat-button-list__button:active,
+.topcoat-button-list__button--large:active,
+:checked + .topcoat-button-list__button {
+  @extend .topcoat-button:active
+}
+
+.topcoat-button-list__button:disabled {
+  @extend .topcoat-button:disabled
+}
+
+.topcoat-button-list__button:hover {
+  @extend .topcoat-button:hover
+}
+
+.topcoat-button-list__button:focus,
+.topcoat-button-list__button--large:focus {
+  @extend .topcoat-button:focus
+  z-index: 1;
+}
+
+.topcoat-button-list__button--large {
+  @extend .topcoat-button--large
+  border-radius: inherit;
+}
+
+.topcoat-button-list__button--large:disabled {
+  @extend .topcoat-button:disabled
+}
+
+.topcoat-button-list__button--large:hover {
+  @extend .topcoat-button:hover
+}
+
+                    </pre></code>
+            <p class="fragment fade-in"> That's <span class="css">all</span>?</p>
+            <p class="fragment fade-in" >Fabrice, you're such a <span class="css">lazybutt</span></p>
+        </section>
+
+        <section data-transition="linear" data-background-transition="slide">
+            <h2>CSS Generation</h2> <br/>
+
+
+            <p class="fragment fade-in"><span class="css">grunt</span> task to generate CSS<br/>
+            <small>4 <span class="css">combinaisons</span> light vc dark, desktop vs mobile</small></p>
+            <p class="fragment fade-in"><span class="css">grunt</span> task to generate great <span class="css">doc</span>, awesome <span class="css">demo</span></p>
+            <p class="fragment fade-in"><span class="css">grunt</span> task to run <span class="css">unit test</span>!</p>
+            <p class="fragment fade-in"><img src="images/baille.jpg" width="20%"><br/>that's <span class="css">work</span>, man</p>
+        </section>
+
+        <section data-transition="linear" data-background-transition="slide">
+            <h2>Fit in</h2> <br/>
+
+
+            <p><span class="css">Object Oriented</span> CSS</p>
+                                <pre><code data-trim contenteditable>
+       /*
+   * Base reset components
+   * Use the naming convention:
+   * {component}-{name}__{subcomponent}--{modifier}
+   *
+   */
+
+  /* Component */
+  .button-group
+
+  /* Component Modifier */
+  .button-group--large
+
+  /* Subcomponent */
+  .button-group__button
+
+  /* Subcomponent Modifier */
+  .button-group__button--cta
+
+  /*
+   * Themed components
+   * Use the naming convention:
+   * {theme}-{component}-{name}__{subcomponent}--{modifier}
+   */
+
+  /* Component */
+  .topcoat-button-group
+
+  /* Component Modifier */
+  .topcoat-button-group--large
+
+  /* Subcomponent */
+  .topcoat-button-group__button
+
+  /* Subcomponent Modifier */
+  .topcoat-button-group__button--cta
+                                    </pre></code>
+
+            <p>follow the <a href="https://github.com/topcoat/topcoat/wiki/Coding-Guidelines">convention</a><br/>
+                <small>You're not just hacking <span class="css">CSS</span>, you design and code <span class="css">reusable</span> CSS</small></p>
+        </section>
+
 
         <section data-transition="linear" data-background-transition="slide">
             <img src="images/thats-all-folks.jpg" width="80%"><br/>

@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$USER_HOME$/aerogear/aerogear.org/Aerogear.org.iml" filepath="$USER_HOME$/aerogear/aerogear.org/Aerogear.org.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../button-list/demo/Demo.iml" filepath="$PROJECT_DIR$/../button-list/demo/Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../reveal.js/Reveal.js.iml" filepath="$PROJECT_DIR$/../reveal.js/Reveal.js.iml" />
       <module fileurl="file://$PROJECT_DIR$/preproCeSSor.iml" filepath="$PROJECT_DIR$/preproCeSSor.iml" />
     </modules>
   </component>
